@@ -1,9 +1,4 @@
 ﻿<?php
-/*
-File name: Usuario.php
-File description: class that represents the user's data 
-Authors: Levi Moraes
-*/
 
 include '../Utilidades/ValidaDados.php';
 include '../Utilidades/ExcessaoNomeInvalido.php';
