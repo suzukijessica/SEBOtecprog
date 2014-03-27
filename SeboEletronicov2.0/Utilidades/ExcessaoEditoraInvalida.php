@@ -1,7 +1,7 @@
 <?php
 /*
  File name: ExcessaoEditora.php
- File description: establishes conection to the database.
+ File description: establishes exception when an invalid editor is inserted.
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha
 */ 
 
