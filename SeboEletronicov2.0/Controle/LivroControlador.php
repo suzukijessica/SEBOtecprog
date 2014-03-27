@@ -10,7 +10,7 @@ include '../Modelo/Livro.php';
 class LivroControlador {
     
     public function salvaLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono){
-    //Insert Livro in Database calling method "salvaLivro" of class LivroDao
+    // Insert Livro in Database calling method "salvaLivro" of class LivroDao
        
        if(empty($venda) && empty($troca)){
             $venda = "venda";
@@ -28,7 +28,7 @@ class LivroControlador {
     }
     
     public function pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca){
-    //Selects Livro in Database calling method "pesquisaLivro" of class LivroDaoo   
+    // Selects Livro in Database calling method "pesquisaLivro" of class LivroDaoo   
        return LivroDao:: pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
     }
     
@@ -37,12 +37,12 @@ class LivroControlador {
     }
     
     public function deletaLivro($idLivro){
-    //Delete Livro in Database calling method "deletaLivro" of class LivroDao 
+    // Delete Livro in Database calling method "deletaLivro" of class LivroDao 
         return LivroDao::deletaLivro($idLivro);
         }
     
     public function alteraLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono, $id_usuario){
-    //Update book parameters in Database calling method "alteraLivro" of class LivroDao    
+    // Update book parameters in Database calling method "alteraLivro" of class LivroDao    
         if(empty($venda) && empty($troca)){
             $venda = "venda";
             $troca = "troca";
