@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: UsuarioControlador.php
+ File description: save, check, change, delete and search the user
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/
 
 include '../Modelo/Usuario.php';
 
