@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: RecebeFormLivro.php
+ File description: cadastra, pesquisa, altera, deleta livros.
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 include_once '../Controle/LivroControlador.php';
 //require_once '';
