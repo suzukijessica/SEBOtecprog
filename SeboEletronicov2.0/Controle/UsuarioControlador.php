@@ -1,9 +1,4 @@
 <?php
-/*
-File name: UsuarioControlador.php
-File description: updates states of the actions like saving, changing, searching and deleting users.
-Authors: Caique Pereira
-*/
 
 include '../Modelo/Usuario.php';
 
