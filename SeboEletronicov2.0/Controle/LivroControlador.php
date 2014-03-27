@@ -1,11 +1,16 @@
 <?php
+/*
+ File name: LivroControlador.php
+ File description: insert, select, update, delete Livros calling methods of class LivroDao.
+ Authors: Caique Pereira, Jessica Suzuki, JoÃ£o Gabriel, MacÃ¡rio Soares, Victor Cunha.
+*/
 
 include '../Modelo/Livro.php';
     
 class LivroControlador {
     
     public function salvaLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono){
-    //Salva um livro no banco de dados chamando o metodo "salvaLivro" da classe LivroDao
+    //Insert Livro in Database calling method "salvaLivro" of class LivroDao
        
        if(empty($venda) && empty($troca)){
             $venda = "venda";
@@ -23,7 +28,7 @@ class LivroControlador {
     }
     
     public function pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca){
-    //Faz a busca de um livro no banco de dados chamando o metodo "pesquisaLivro" da classe LivroDao   
+    //Selects Livro in Database calling method "pesquisaLivro" of class LivroDaoo   
        return LivroDao:: pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
     }
     
@@ -32,12 +37,12 @@ class LivroControlador {
     }
     
     public function deletaLivro($idLivro){
-    //Faz a deleção de um livro no banco de dados chamando o metodo "deletaLivro" da classe LivroDao 
+    //Delete Livro in Database calling method "deletaLivro" of class LivroDao 
         return LivroDao::deletaLivro($idLivro);
         }
     
     public function alteraLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono, $id_usuario){
-    //Altera um ou mais parametros de um livro no banco de dados chamando o metodo "alteraLivro" da classe LivroDao    
+    //Update book parameters in Database calling method "alteraLivro" of class LivroDao    
         if(empty($venda) && empty($troca)){
             $venda = "venda";
             $troca = "troca";
