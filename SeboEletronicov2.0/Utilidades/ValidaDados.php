@@ -15,10 +15,12 @@ class ValidaDados {
         }
         
         public function validaSenhaNula($senha){
+        //Check if password is null
             return (!(empty($senha[0])) && !(empty($senha[1])));
         }
         
         public function validaNome($nome){
+        //Check name provided by user
 
             $caracteresValidos = '. abcdefghijklmnopqrstuvwxyzçãõáíóúàòìù';
             
@@ -35,12 +37,15 @@ class ValidaDados {
         }
         
         public function validaEmail($email){
+        //Check email provided by user
+        	
            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 return 1;
            }
         }
         
         public function validaTelefone($telefone){
+        //Check telephone provided by user
             
             if(!filter_var($telefone, FILTER_VALIDATE_INT)){
                 return 1;
@@ -50,6 +55,7 @@ class ValidaDados {
         }
         
         public function validaSenha($senha){
+        //Check password provided by user
 
             if( !filter_var($senha[0], FILTER_VALIDATE_INT)){//caracter invalido
                 return 1;
