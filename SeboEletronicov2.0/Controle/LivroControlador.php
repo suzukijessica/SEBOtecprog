@@ -5,6 +5,8 @@ include '../Modelo/Livro.php';
 class LivroControlador {
     
     public function salvaLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono){
+    //Salva um livro no banco de dados chamando o metodo "salvaLivro" da classe LivroDao
+       
        if(empty($venda) && empty($troca)){
             $venda = "venda";
             $troca = "troca";
@@ -21,6 +23,7 @@ class LivroControlador {
     }
     
     public function pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca){
+    //Faz a busca de um livro no banco de dados chamando o metodo "pesquisaLivro" da classe LivroDao   
        return LivroDao:: pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
     }
     
@@ -29,10 +32,12 @@ class LivroControlador {
     }
     
     public function deletaLivro($idLivro){
+    //Faz a deleção de um livro no banco de dados chamando o metodo "deletaLivro" da classe LivroDao 
         return LivroDao::deletaLivro($idLivro);
         }
     
     public function alteraLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono, $id_usuario){
+    //Altera um ou mais parametros de um livro no banco de dados chamando o metodo "alteraLivro" da classe LivroDao    
         if(empty($venda) && empty($troca)){
             $venda = "venda";
             $troca = "troca";
