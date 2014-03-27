@@ -1,5 +1,9 @@
 <?php
-    
+/*
+ File name: ConexaoComBanco.php
+ File description: establishes conection to the database.
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha
+*/       
         $server = "localhost";
         $username = "SeboEletronico";
         $senha = "sebo";
