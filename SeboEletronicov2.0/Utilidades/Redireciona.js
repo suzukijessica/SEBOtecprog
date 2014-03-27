@@ -1,3 +1,9 @@
+/*
+ File name: Redireciona.js
+ File description: redirects windows
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
+
 function livrosDisponiveis(){
     window.location="http://localhost/SeboEletronicov2.0/Visao/livrosDisponiveis.php";
 }

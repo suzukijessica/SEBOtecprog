@@ -1,7 +1,7 @@
 <?php
 /*
  File name: RecebeFormLivro.php
- File description: cadastra, pesquisa, altera, deleta livros.
+ File description: gets selected form to register, change, search or delete book
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */ 
 

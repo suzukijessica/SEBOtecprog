@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: RecebeForm.php
+ File description: gets selected form to register, change, search or delete user
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 include_once '../Controle/UsuarioControlador.php';
 

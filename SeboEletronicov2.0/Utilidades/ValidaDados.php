@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: ValidaDados.php
+ File description: check informations
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 class ValidaDados {
 

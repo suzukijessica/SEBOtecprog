@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: mail.php
+ File description: email
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 include 'Usuario.php';
 
 $destinatario = Usuario::getEmail();
