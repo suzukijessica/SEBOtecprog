@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: Livro.php
+ File description: model of book
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 include '../Dao/LivroDao.php';
 include '../Utilidades/ValidaDados.php';

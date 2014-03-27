@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: compra.php
+ File description: model of bye
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 	include "../Dao/conexao_bd.inc";
 	if(!$bd) die ("<h1>Falha no bd </h1>");
@@ -7,20 +12,7 @@
         $result = mysql_query($sql);
         
         $cont =0;
-        $registro = mysql_fetch_assoc($result);
-
-        
-//        
-//        while() {
-//	   
-//                 
-//		 $listaLivros = array($cont=>$registro);
-//                 
-//                 
-//                 $cont++;
-//		}
-//             
-                
+        $registro = mysql_fetch_assoc($result);           
         
         var_dump($registro);
         

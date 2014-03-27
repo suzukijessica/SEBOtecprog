@@ -1,4 +1,9 @@
-﻿<?php
+<?php
+/*
+ File name: Usuario.php
+ File description: model of user
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 include '../Utilidades/ValidaDados.php';
 include '../Utilidades/ExcessaoNomeInvalido.php';
