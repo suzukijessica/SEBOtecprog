@@ -10,7 +10,7 @@ include "../Utilidades/ConexaoComBanco.php";
 class UsuarioDao {
 
     public function salvaUsuario($usuario){
-       //salva usuário no banco de dados
+       //save user in data base
         $senhaAux = $usuario->getSenha();
         $senhaFinal = $senhaAux[0];
          
