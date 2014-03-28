@@ -21,7 +21,7 @@ class LivroControlador {
             $livro = new Livro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao);
         }catch(Exception $e){
             print"<script>alert('".$e->getMessage()."')</script>";
-            echo "<script>window.location='http://localhost/SeboEletronicov2.0/Visao/cadastrarLivro.php';</script>";
+            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarLivro.php';</script>";
             exit;    
         }
         return LivroDao::salvaLivro($livro, $id_dono);
@@ -52,7 +52,7 @@ class LivroControlador {
             $livro = new Livro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao);
         }catch(Exception $e){
             print"<script>alert('".$e->getMessage()."')</script>";
-            echo "<script>window.location='http://localhost/SeboEletronicov2.0/Visao/cadastrarLivro.php';</script>";
+            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarLivro.php';</script>";
             exit;    
         }
         return LivroDao::alteraLivro($livro, $id_dono, $id_usuario);
