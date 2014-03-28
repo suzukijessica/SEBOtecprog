@@ -5,7 +5,7 @@
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha
 */       
         $server = "localhost";
-        $username = "SeboEletronico";
+        $username = "root";
         $senha = "";
         $dbcon = mysql_connect($server, $username, $senha);
         

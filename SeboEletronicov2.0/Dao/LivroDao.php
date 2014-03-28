@@ -108,7 +108,7 @@ class LivroDao {
             $livros[]=$registro;         
 	}
         
-        if(!(empty($livros))){
+        if(count($livros) == 0){
             return false;
         }
         
