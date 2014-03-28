@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: UsuarioDaoTest.php
+ File description: testing function of class UsuarioDao.php
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 require_once "../../Modelo/Usuario.php";
 require_once "../../Dao/UsuarioDao.php";
