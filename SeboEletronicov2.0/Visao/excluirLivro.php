@@ -1,7 +1,7 @@
 <?php
 /*
  File name: excluirLivro.php
- File description: data view to delete the Livro
+ File description: data view to delete the book.
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */
 
