@@ -36,15 +36,13 @@ class Usuario {
     //Método para modificar a instância do atributo nome
         
         if(!ValidaDados::validaCamposNulos($nome)){
-        //Condicao para validar se o campo nome é nulo
+        //Condicoes para validar se o campo nome é nulo, se contem caracteres invalidos e se tem espacos seguidos
             throw new ExcessaoNomeInvalido("Nome nao pode ser nulo!");
             
         }elseif(ValidaDados::validaNome($nome) == 1){
-         //Condicao para validar se o campo nome contem caracteres invalidos
             throw new ExcessaoNomeInvalido("Nome contem caracteres invalidos!");
             
         }elseif(ValidaDados::validaNome($nome) == 2){
-         //Condicao para validar se o campo nome tem espacos seguidos
             throw new ExcessaoNomeInvalido("Nome contem espaços seguidos!");
         }else{
             $this->nome = $nome;
@@ -60,15 +58,13 @@ class Usuario {
     //Método para modificar a instância do atributo telefone
         
         if(!ValidaDados::validaCamposNulos($telefone)){
-        //Condicao para validar se o campo telefone é nulo
+        //Condicao para validar se o campo telefone é nulo, se contem caracteres invalidos e se tem 8 digitos
             throw new ExcessaoTelefoneInvalido("Telefone nao pode ser nulo!");
             
         }elseif(ValidaDados::validaTelefone($telefone) == 1){
-        //Condicao para validar se o campo telefone contem caracteres invalidos
             throw new ExcessaoTelefoneInvalido("Telefone nao pode conter caracteres alfabeticos!");
             
         }elseif(ValidaDados::validaTelefone($telefone) == 2){
-        //Condicao para validar a quantidade de 8 digitos do campo telefone 
             throw new ExcessaoTelefoneInvalido("Telefone deve conter exatamente oito (8) digitos!");
         }else{
             $this->telefone = $telefone;
@@ -84,11 +80,10 @@ class Usuario {
     //Método para modificar a instância do atributo email
         
         if(!ValidaDados::validaCamposNulos($email)){
-        //Condicao para validar se o campo email é nulo
+        //Condicao para validar se o campo email é nulo e se tem o formato valido xxxx@aa.jjf 
             throw new ExcessaoEmailInvalido("E-mail nao pode ser nulo!");
             
         }elseif(ValidaDados::validaEmail($email) == 1){
-        //Condicao para validar se o campo email tem o formato valido xxxx@aa.jjf  
             throw new ExcessaoEmailInvalido("E-mail nao válido!");
         }else{
             $this->email = $email;
@@ -107,19 +102,16 @@ class Usuario {
         //variável para controlar a validacao do atributo senha
         
         if(!ValidaDados::validaSenhaNula($senha)){
-        //Condicao para validar se o campo senha é nulo
+        //Condicao para validar se o campo senha é nulo, se tem caracteres invalidos, se tem 6 digitos e se esta correta
             throw new ExcessaoSenhaInvalida("Senha nao pode ser nula!");
             
         }elseif($auxiliar == 1){
-        //Condicao para validar se o campo senha tem caracteres invalidos
             throw new ExcessaoSenhaInvalida("Senha contem caracteres invalidos!");
             
         }elseif($auxiliar == 2){
-        //Condicao para validar se o campo senha tem 6 digitos
             throw new ExcessaoSenhaInvalida("Senha deve conter exatamente seis (6) digitos!");
             
         }elseif($auxiliar == 3){
-        //Condicao para validar se a senha está correta
             throw new ExcessaoSenhaInvalida("Senha e confirmação estão diferentes!");
         }else{
             $this->senha = $senha;
