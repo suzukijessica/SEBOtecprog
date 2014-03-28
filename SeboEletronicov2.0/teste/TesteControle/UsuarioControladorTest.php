@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: UsuarioControladorTest.php
+ File description: testing function of class UsuarioControlador.php
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 require_once "../../Modelo/Usuario.php";
 require_once "../../Controle/UsuarioControlador.php";
