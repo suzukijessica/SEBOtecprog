@@ -8,7 +8,8 @@
 include_once '../Controle/UsuarioControlador.php';
 
 switch($_POST['tipo']){
-      
+//switch de selecao da acao a ser realizada: cadastrar, alterar, pesquisar ou deletar
+    
       case "cadastrar":  $nome = $_POST['nome'];
                          $email = $_POST['email'];
                          $telefone = $_POST['telefone'];
