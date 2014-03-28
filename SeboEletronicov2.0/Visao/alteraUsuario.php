@@ -1,7 +1,7 @@
 <?php
 /*
- File name: RecebeForm.php
- File description: Data View to change the User
+ File name: alteraUsuario.php
+ File description: data view to change the user
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */ 
 
