@@ -10,7 +10,7 @@ include "../Utilidades/ConexaoComBanco.php";
 class UsuarioDao {
 
     public function salvaUsuario($usuario){
-       //save user in data base
+    //saves user in data base
         $senhaAux = $usuario->getSenha();
         $senhaFinal = $senhaAux[0];
          
@@ -29,7 +29,7 @@ class UsuarioDao {
     }
     
     public function alteraUsuario($usuario, $idDoUsuario,$senhaVelha){
-     //altera dados do cadastro no banco de dados
+     //changes the registration data in the database
         
         $senhaAux = $usuario->getSenha();
         $senhaAlterar = $senhaAux[0];
@@ -52,7 +52,7 @@ class UsuarioDao {
     }
 
     public function pesquisaUsuario($usuario){
-    //pesquisa informaçoes de cadastro de um usuario no banco de dados pelo nome
+    //searches the user's registration information in the database by his name
         
         $sql="SELECT * FROM usuario WHERE nome_usuario = '".$usuario."'";
         $resultado=mysql_query($sql);
@@ -62,7 +62,7 @@ class UsuarioDao {
     }
     
     public function deletaUsuario($email, $senha){
-    //exclui o cadastro do usuario do banco de dados
+    //excludes the user's registration from the database
                 
         $sql="DELETE FROM usuario WHERE email_usuario = '".$email."'";
         $deletouUsuario = mysql_query($sql);
