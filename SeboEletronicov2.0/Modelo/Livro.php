@@ -1,7 +1,7 @@
 <?php
 /*
  File name: Livro.php
- File description: model of book
+ File description: model of book.
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */ 
 
@@ -46,8 +46,8 @@ class Livro {
         }else{
             $this->titulo = $titulo;
         }
-        //Nao tera tratamento de excessao, pois o titulo é pessoal e vai de cada autor, 
-        //logo pode ter qualquer tipo de caracter que o autor desejar
+        //it will not have exception treatment, because the title is personal and depends on 
+	//each author, so you can have any kind of character that the author wishes.
     }
 
     public function getAutor() {
@@ -98,7 +98,7 @@ class Livro {
         $this->descricao = $descricao;
     }
 
-    public function defineTiposDeGeneros() { //Genero por engenharia
+    public function defineTiposDeGeneros() { //genre for engineering
         define("ENGENHARIA", "Engenharia", TRUE);
         define("SOFTWARE", "Engenharia de Software", TRUE);
         define("ELETRONICA", "Engenharia Eletronica", TRUE);
@@ -114,7 +114,7 @@ class Livro {
     }
     
     public function setEdicao($edicao){
-        $this->edicao = $edicao;//Precisa validar entrada só de números
+        $this->edicao = $edicao;//needs to validate entry of numbers
     }
     
     public function getEditora(){
