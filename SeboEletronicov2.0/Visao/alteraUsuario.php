@@ -1,4 +1,10 @@
 <?php
+/*
+ File name: RecebeForm.php
+ File description: Data View to change the User
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
+
     session_start();
     $id_usuario = $_SESSION['id_usuario'];
     $senhaFinal = $_SESSION['senha'];
