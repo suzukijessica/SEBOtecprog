@@ -1,4 +1,10 @@
 <?php
+/*
+ File name: cadastrarUsuario.php
+ File description: data view to registering the user
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
+
 session_start();
 $id_usuario = $_SESSION['id_usuario'];
 ?>
