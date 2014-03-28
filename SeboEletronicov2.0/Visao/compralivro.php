@@ -1,4 +1,10 @@
 <?php
+/*
+ File name: compralivro.php
+ File description: data view to buy the book
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
+
 session_start();
 $id_usuario = $_SESSION['id_usuario'];
 ?>
