@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: LivroDaoTest.php
+ File description: testing functions of class LivroDaoTest.php.
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 require_once "../../Modelo/Livro.php";
 require_once "../../Dao/LivroDao.php";
