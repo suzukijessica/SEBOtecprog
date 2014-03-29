@@ -1,4 +1,9 @@
 <?php
+/*
+ File name: LivroControladorTest.php
+ File description: testing functions of class LivroControlador.php
+ Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+*/ 
 
 require_once "../../Modelo/Livro.php";
 require_once "../../Controle/LivroControlador.php";
