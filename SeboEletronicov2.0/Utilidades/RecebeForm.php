@@ -8,7 +8,7 @@
 include_once '../Controle/UsuarioControlador.php';
 
 switch($_POST['tipo']){
-//switch de selecao da acao a ser realizada no cadastro do usuario: cadastrar, alterar, pesquisar ou deletar
+//switch action selection to be held in the register book, register, change, or delete search
     
       case "cadastrar":  $nome = $_POST['nome'];
                          $email = $_POST['email'];
