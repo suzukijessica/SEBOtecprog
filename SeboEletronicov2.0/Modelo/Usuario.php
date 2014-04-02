@@ -20,7 +20,7 @@ class Usuario {
     private $senha;
     
     public function __construct($nome, $telefone, $email, $senha) {
-    //Método construtor da classe
+    //Constructor method of class
         $this->setNome($nome);
         $this->setTelefone($telefone);
         $this->setEmail($email);
@@ -28,15 +28,14 @@ class Usuario {
     }
  
     public function getNome() {
-    //Método para acessar a instância do atributo nome
+    //Method to access the instance of name attribute
         return $this->nome;
     }
         
     public function setNome($nome){
-    //Método para modificar a instância do atributo nome
+    //Method to modify the instance of the name attribute 
         
         if(!ValidaDados::validaCamposNulos($nome)){
-        //Condicoes para validar se o campo nome é nulo, se contem caracteres invalidos e se tem espacos seguidos
             throw new ExcessaoNomeInvalido("Nome nao pode ser nulo!");
             
         }elseif(ValidaDados::validaNome($nome) == 1){
@@ -50,15 +49,14 @@ class Usuario {
     }
 
     public function getTelefone() {
-    //Método para acessar a instância do atributo telefone
+    //Method to access the instance of phone attribute
         return $this->telefone;
     }
 
     public function setTelefone($telefone) {
-    //Método para modificar a instância do atributo telefone
+    //Method to modify the instance of the telephone attribute 
         
         if(!ValidaDados::validaCamposNulos($telefone)){
-        //Condicao para validar se o campo telefone é nulo, se contem caracteres invalidos e se tem 8 digitos
             throw new ExcessaoTelefoneInvalido("Telefone nao pode ser nulo!");
             
         }elseif(ValidaDados::validaTelefone($telefone) == 1){
@@ -72,15 +70,14 @@ class Usuario {
     }
 
     public function getEmail() {
-    //Método para acessar a instância do atributo email
+    //Method to access the instance of email attribute
 	return $this->email;
     }
 
     public function setEmail($email) {
-    //Método para modificar a instância do atributo email
+    //Method to modify the instance of the email attribute 
         
         if(!ValidaDados::validaCamposNulos($email)){
-        //Condicao para validar se o campo email é nulo e se tem o formato valido xxxx@aa.jjf 
             throw new ExcessaoEmailInvalido("E-mail nao pode ser nulo!");
             
         }elseif(ValidaDados::validaEmail($email) == 1){
@@ -91,18 +88,16 @@ class Usuario {
     }
 
     public function getSenha() {
-    //Método para acessar a instância do atributo senha
+    //Method to access the instance of password attribute
         return $this->senha;
     }
 
     public function setSenha($senha) {
-    //Método para modificar a instância do atributo senha   
+    //Method to modify the instance of the password attribute   
         
         $auxiliar = ValidaDados::validaSenha($senha);
-        //variável para controlar a validacao do atributo senha
         
         if(!ValidaDados::validaSenhaNula($senha)){
-        //Condicao para validar se o campo senha é nulo, se tem caracteres invalidos, se tem 6 digitos e se esta correta
             throw new ExcessaoSenhaInvalida("Senha nao pode ser nula!");
             
         }elseif($auxiliar == 1){
