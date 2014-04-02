@@ -9,7 +9,7 @@ include_once '../Controle/LivroControlador.php';
 //require_once '';
 
 switch($_POST['tipo']){
-//switch de selecao da acao a ser realizada no cadastro do livro: cadastrar, alterar, pesquisar ou deletar      
+//switch action selection to be held in the register book, register, change, or delete search     
     
       case "cadastraLivro":  
                          $titulo = $_POST['titulo'];
