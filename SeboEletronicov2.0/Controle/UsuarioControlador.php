@@ -1,7 +1,7 @@
 <?php
 /*
  File name: UsuarioControlador.php
- File description: save, check, change, delete and search the user
+ File description: controls actions of save, check, change, delete and search the users
  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */
 
@@ -11,7 +11,7 @@ class UsuarioControlador {
     
     
         public function salvaUsuario($nome, $email, $telefone, $senha){
-        //salva usuário no banco de dados
+        //saves user control actions in the database
             
             try{
                 $usuario = new Usuario($nome, $telefone, $email, $senha);
@@ -25,12 +25,12 @@ class UsuarioControlador {
 
        
         public function checaCadastroId($id){
-        //checa o identificador único para cada usuário cadastrado
+        //checks the unique identifier for each registered user
             return UsuarioDao::getCadastradosPorId($id);
         }
 
         public function alterarCadastro($nome, $email, $telefone, $senha, $id, $senhaVelha){
-        //altera dados do cadastro no banco de dados
+        //controls actions to change the user's registration data into the database
             
             try{
                 
@@ -45,14 +45,14 @@ class UsuarioControlador {
         }
         
         public function deletaCadastro($email, $senha){
-        //exclui o cadastro do usuario do banco de dados
+        //controls actions to delete the registration of the User Database
             
             return UsuarioDao::deletaUsuario($email, $senha);
    
         }
 
         public function pesquisaUsuario($nome){
-        //pesquisa informaçoes de cadastro de um usuario no banco de dados pelo nome
+        //controls actions of search information of membership of a User on the database by name
             
             return UsuarioDao::pesquisaUsuario($nome);
         } 
