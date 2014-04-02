@@ -10,8 +10,9 @@ class ValidaDados {
     
         public function validaCamposNulos($parametro){
             return !(empty($parametro));
-            //retorna verdadeiro caso a variavel esteja vazia
-            //com isso, o valor false eh invertido e enviado como true
+            // returns true if the variable is empty 
+            // with this, the value false eh inverted and sent as true
+            
         }
         
         public function validaSenhaNula($senha){
