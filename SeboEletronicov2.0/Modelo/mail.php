@@ -27,11 +27,11 @@ $mensagem ='<html>
 
 
 $subject= 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico'; 
-// Assunto
+// Subject
 $to= $destinatario; 
-// Destinatario
+// Receiver
 $body= $mensagem; 
-// Corpo da mensagem de texto.
+// Body of the text message.
 
 if (mail($to,$subject,$body,"Content-Type: text/html"))
 echo 'e-mail enviado com sucesso!';
