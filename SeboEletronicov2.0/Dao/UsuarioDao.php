@@ -75,6 +75,7 @@ class UsuarioDao {
     }
 
     public function getCadastradosPorId($idPessoa){
+    //get the registrated users by id
         
         $sql="SELECT * FROM usuario WHERE id_usuario = '".$idPessoa."'";
         $resultado = mysql_query($sql);
