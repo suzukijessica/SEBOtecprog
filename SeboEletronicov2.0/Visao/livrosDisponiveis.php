@@ -2,7 +2,6 @@
 /*
  File name: livrosDisponiveis.php
  File description: data view to list the available books
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */
 
 session_start();

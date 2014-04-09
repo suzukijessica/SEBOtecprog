@@ -37,7 +37,6 @@ $id_usuario = $_SESSION['id_usuario'];
     
    
     <?php
-	//$_POST['tel_usuario'];
 
 include "..\Utilidades\ConexaoComBanco.php";
 	if(!$bd) die ("<h1>Falha no bd </h1>");

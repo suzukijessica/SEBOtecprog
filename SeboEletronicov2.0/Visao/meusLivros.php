@@ -2,7 +2,6 @@
 /*
  File name: meusLivros.php
  File description: data view to list the books of any user
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */
 
 session_start();

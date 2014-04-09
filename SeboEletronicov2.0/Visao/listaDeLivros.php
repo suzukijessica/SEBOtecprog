@@ -2,7 +2,6 @@
 /*
  File name: listaDeLivros.php
  File description: data view to list the books
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */
 
 include '../Controle/LivroControlador.php';

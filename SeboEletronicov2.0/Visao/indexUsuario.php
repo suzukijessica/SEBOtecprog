@@ -1,4 +1,9 @@
-
+<?php
+/*
+ File name: indexUsuario.php
+ File description: page initial of users
+*/
+?>
 <!DOCTYPE HTML>
 <html>
 <head>	

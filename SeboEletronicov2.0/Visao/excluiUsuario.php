@@ -2,7 +2,6 @@
 /*
  File name: excluiUsuarui.php
  File description: data view to delete the user
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */
 
 session_start();
