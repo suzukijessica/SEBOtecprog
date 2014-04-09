@@ -19,3 +19,17 @@ Variáveis:
 Classe: cadastrarUsuario.php
 Variáveis:
 	id_usuario = recebe o id da tabela de usuario do banco
+*************
+Classe: compralivro.php
+	id_usuario = recebe o id da tabela de usuario do banco
+	bd = variável que recebe se o banco está ativo ou não
+	tel_comprador = recebe telefone do comprador
+	nome_comprador = recebe nome do comprador
+	id_livro = recebe id do livro desejado
+	id_dono = recebe id do dono do livro
+	strSQL = recebe string do SQL
+	rs = recebe o resultado da pesquisa no banco
+	row = recebe resultado da coluna da tabela do banco
+	email_vendedor = recebe email do da coluna email_usuario do vendedor
+	strSQL5 = 
+	rs 5
