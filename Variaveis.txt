@@ -1,0 +1,21 @@
+Pacote : View
+*************
+Classe: alteraUsuario.php
+Variáveis:
+	id_usuario = recebe o id da tabela de usuario do banco
+	senhaFinal = recebe a senha da tabela de senhha do banco
+	cadastro = recebe resultado da função checaCadastroId()
+*************
+Classe: alterarLivro.php
+Variáveis:
+	id_usuario = recebe o id da tabela de usuario do banco
+	id = recebe um id
+	listaLivros = recebe resultado da função getLivroByid()
+*************
+Classe: cadastrarLivro.php
+Variáveis:
+	id_usuario = recebe o id da tabela de usuario do banco
+*************
+Classe: cadastrarUsuario.php
+Variáveis:
+	id_usuario = recebe o id da tabela de usuario do banco
