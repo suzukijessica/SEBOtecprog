@@ -2,7 +2,6 @@
 /*
  File name: detalheslivro.php
  File description: data view to see details of the book
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */ 
 
 session_start();
