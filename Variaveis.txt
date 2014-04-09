@@ -1,25 +1,25 @@
 Pacote : View
-*************
+***********************
 Classe: alteraUsuario.php
 Variáveis:
 	id_usuario = recebe o id da tabela de usuario do banco
 	senhaFinal = recebe a senha da tabela de senhha do banco
 	cadastro = recebe resultado da função checaCadastroId()
-*************
+***********************
 Classe: alterarLivro.php
 Variáveis:
 	id_usuario = recebe o id da tabela de usuario do banco
 	id = recebe um id
 	listaLivros = recebe resultado da função getLivroByid()
-*************
+***********************
 Classe: cadastrarLivro.php
 Variáveis:
 	id_usuario = recebe o id da tabela de usuario do banco
-*************
+***********************
 Classe: cadastrarUsuario.php
 Variáveis:
 	id_usuario = recebe o id da tabela de usuario do banco
-*************
+***********************
 Classe: compralivro.php
 	id_usuario = recebe o id da tabela de usuario do banco
 	bd = variável que recebe se o banco está ativo ou não
@@ -33,7 +33,7 @@ Classe: compralivro.php
 	email_vendedor = recebe email do da coluna email_usuario do vendedor
 	strSQL5 = 
 	rs5 =
-*************
+***********************
 Classe: detalheslivro.php
 	id_usuario = recebe o id da tabela de usuario do banco
 	mural = recebe via post mural (onde mostra os detalhes do livro)
@@ -45,4 +45,16 @@ Classe: detalheslivro.php
 	insere = insere dados no mural
 	nome_comprador = parametro que será inserido no mural
 	id_livro = parametro que será inserido no mural
-*************
+***********************
+Classe: excluiUsuario.php
+	id_usuario = recebe o id da tabela de usuario do banco
+	senhaFinal = recebe a senha da tabela de senhha do banco
+	cadastro = recebe resultado da função checaCadastroId()
+***********************
+Classe: excluirLivro.php
+	id_usuario = recebe o id da tabela de usuario do banco
+***********************
+Classe: listaDeLivros.php
+	id = recebe id de livro
+	listaLivros = recebe resultado de getLivroById()
+	
