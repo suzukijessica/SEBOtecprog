@@ -1,4 +1,4 @@
-Pacote : View
+-----------------------Pacote : View
 ***********************
 Classe: alteraUsuario.php
 Variáveis:
@@ -57,4 +57,26 @@ Classe: excluirLivro.php
 Classe: listaDeLivros.php
 	id = recebe id de livro
 	listaLivros = recebe resultado de getLivroById()
-	
+***********************
+Classe: livrosDisponiveis.php
+	id = recebe id de usuario do banco
+	listaLivros = recebe lita de todos os livros registrados
+	chave = chave do array
+	valor = valor do array
+***********************
+Classe: meusLivros.php
+	id = recede id do usuario do banco
+	listaLivros = pega livros por id
+	chave = chave do array
+	valor = valor do array
+***********************
+Classe: site.php
+	id_usuario = recebe id do usuario da tabela do banco
+***********************
+Classe: usuarioPesquisado.php
+	id_usuario = recebe id do usuario da tabela do banco
+	nome = recebe o valor do nome
+	pesquisado = resultado da pesquisa pelo nome
+	pesquisado = recebe resultado da pesquisa no array
+
+-----------------------Pacote: model
