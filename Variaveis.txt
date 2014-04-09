@@ -32,4 +32,17 @@ Classe: compralivro.php
 	row = recebe resultado da coluna da tabela do banco
 	email_vendedor = recebe email do da coluna email_usuario do vendedor
 	strSQL5 = 
-	rs 5
+	rs5 =
+*************
+Classe: detalheslivro.php
+	id_usuario = recebe o id da tabela de usuario do banco
+	mural = recebe via post mural (onde mostra os detalhes do livro)
+	id_lidro = recebe via post o id do livro
+	email_usuario = recebe o email
+	strSQL4 = seleciona o email do usuario
+	rs4 = recebe o resultado da pesquisa no banco
+	row = pega valor da coluna da tabela do banco
+	insere = insere dados no mural
+	nome_comprador = parametro que será inserido no mural
+	id_livro = parametro que será inserido no mural
+*************
