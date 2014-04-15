@@ -13,18 +13,18 @@ switch($_POST['tipo']){
     
       case "cadastraLivro":  
                          $titulo = $_POST['titulo'];
-                         $autor = $_POST['autor'];
-                         $editora = $_POST['editora'];
+                         $author = $_POST['autor'];
+                         $publishing = $_POST['editora'];
                          $edicao = $_POST['edicao'];
                          $venda= $_POST['venda'];
                          $troca= $_POST['troca'];
                          $genero = $_POST['genero'];
-                         $estado = $_POST['estado'];
-                         $descricao = $_POST['descricao'];
+                         $preservation = $_POST['estado'];
+                         $description = $_POST['descricao'];
                          $idOwner = $_POST['id_dono'];
                         
                          
-                        $salvo = LivroControlador::salvaLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $idOwner);
+                        $salvo = LivroControlador::salvaLivro($titulo, $author, $genero, $edicao, $publishing, $venda, $troca, $preservation, $description, $idOwner);
                          
                          
                          if (!empty($salvo)){
@@ -40,18 +40,18 @@ switch($_POST['tipo']){
       
       case "alterarLivro":   
                          $titulo = $_POST['titulo'];
-                         $autor = $_POST['autor'];
-                         $editora = $_POST['editora'];
+                         $author = $_POST['autor'];
+                         $publishing = $_POST['editora'];
                          $edicao = $_POST['edicao'];
                          $venda= $_POST['venda'];
                          $troca= $_POST['troca'];
                          $genero = $_POST['genero'];
-                         $estado = $_POST['estado'];
-                         $descricao = $_POST['descricao'];
+                         $preservation = $_POST['estado'];
+                         $description = $_POST['descricao'];
                          $idOwner = $_POST['id_dono'];
                          $id = $_POST['id'];
                         
-                        LivroControlador::alteraLivro($titulo, $autor, $genero, $edicao, $editora,$venda, $troca, $estado, $descricao, $id, $idOwner);
+                        LivroControlador::alteraLivro($titulo, $author, $genero, $edicao, $publishing,$venda, $troca, $preservation, $description, $id, $idOwner);
                         ?>
                             <script language="Javascript" type="text/javascript">
                                 alert("Livro alterado com sucesso!!");

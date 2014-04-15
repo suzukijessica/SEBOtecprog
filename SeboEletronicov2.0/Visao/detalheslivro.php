@@ -24,7 +24,7 @@ $idUser = $_SESSION['id_usuario'];
         $_POST['mural'];
         $_POST['nome_comprador'];
         $_POST ['id_livro'];
-        $mural = $_POST['mural'];
+        $wall = $_POST['mural'];
 
         include "..\Utilidades\ConexaoComBanco.php";
         if (!$dataBase)
@@ -33,9 +33,9 @@ $idUser = $_SESSION['id_usuario'];
         //Acessar Informações do comprador
         $idBook = $_POST['id_livro'];
 
-        $email_usuario = $_SESSION["email"];
+        $emailUser = $_SESSION["email"];
 
-        $strSQL4 = "SELECT * FROM usuario WHERE email_usuario = '$email_usuario' ";
+        $strSQL4 = "SELECT * FROM usuario WHERE email_usuario = '$emailUser' ";
 
         $rs4 = mysql_query($strSQL4);
 
@@ -43,7 +43,7 @@ $idUser = $_SESSION['id_usuario'];
             $nameBuyer = $row['nome_usuario'];
         }
 
-        $insere = mysql_query("INSERT INTO mural (texto,nome_pergunta,id_livro) VALUES ('$mural', '$nameBuyer', '$idBook')");
+        $put = mysql_query("INSERT INTO mural (texto,nome_pergunta,id_livro) VALUES ('$wall', '$nameBuyer', '$idBook')");
         ?>
 
         <div id="header">
@@ -68,7 +68,7 @@ $idUser = $_SESSION['id_usuario'];
             die("<h1>Falha no bd </h1>");
 
         //Acessar Informações do comprador
-        $strSQL2 = "SELECT * FROM usuario WHERE email_usuario = '" . $email_usuario . "' ";
+        $strSQL2 = "SELECT * FROM usuario WHERE email_usuario = '" . $emailUser . "' ";
 
         $rs2 = mysql_query($strSQL2);
 
@@ -90,10 +90,10 @@ $idUser = $_SESSION['id_usuario'];
         while ($row = mysql_fetch_array($result)) {
 
             $titulo2 = $row['titulo_livro'] . "<br />";
-            $estado = $row['estado_conserv'] . "<br />";
-            $editora = $row ['editora'] . "<br />";
-            $autor = $row ['autor'] . "<br />";
-            $descricao = $row ['descricao_livro'] . "<br />";
+            $preservation = $row['estado_conserv'] . "<br />";
+            $publishing = $row ['editora'] . "<br />";
+            $author = $row ['autor'] . "<br />";
+            $description = $row ['descricao_livro'] . "<br />";
             $idOwner = $row['id_dono'] . "<br />";
         }
 
@@ -104,16 +104,16 @@ $idUser = $_SESSION['id_usuario'];
         echo '</h1> </h6><br /><br />';
 
         echo'<h6>Autor: ';
-        echo $autor;
+        echo $author;
         echo'</h6><br />';
 
         echo'<h6>Editora: ';
-        echo $editora;
+        echo $publishing;
         echo'</h6><br />';
 
 
         echo'<h6>Descricao: ';
-        echo $descricao;
+        echo $description;
         echo'</h6><br /><br />';
         ?>
 
