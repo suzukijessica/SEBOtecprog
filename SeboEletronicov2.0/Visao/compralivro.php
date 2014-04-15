@@ -39,23 +39,23 @@ $idUser = $_SESSION['id_usuario'];
     <?php
 
 include "..\Utilidades\ConexaoComBanco.php";
-	if(!$bd) die ("<h1>Falha no bd </h1>");
+	if(!$dataBase) die ("<h1>Falha no bd </h1>");
 
-	$tel_comprador = $_POST ['tel_comprador'];
-	$nome_comprador = $_POST['nome_comprador'];
-	$id_livro = $_POST['id_livro'];
-	$id_dono = $_POST['id_dono'];
+	$phoneBuyer = $_POST ['tel_comprador'];
+	$nameBuyer = $_POST['nome_comprador'];
+	$idBook = $_POST['id_livro'];
+	$idOwner = $_POST['id_dono'];
 
 
 
 //Dados Vendedor
-$strSQL = "SELECT * FROM usuario WHERE id_usuario = '$id_dono' ";
+$stringSQL = "SELECT * FROM usuario WHERE id_usuario = '$idOwner' ";
  
- $rs = mysql_query($strSQL);
+ $result = mysql_query($stringSQL);
 		
-		while($row = mysql_fetch_array($rs)) {
+		while($row = mysql_fetch_array($result)) {
 	   
-		$email_vendedor = $row['email_usuario'] . "<br />";
+		$emailSeller = $row['email_usuario'] . "<br />";
 		
 		}
 
@@ -66,9 +66,9 @@ $strSQL = "SELECT * FROM usuario WHERE id_usuario = '$id_dono' ";
 include '../Modelo/Usuario.php';
 
 include "..\Utilidades\ConexaoComBanco.php";
-	if(!$bd) die ("<h1>Falha no bd </h1>");
+	if(!$dataBase) die ("<h1>Falha no bd </h1>");
 	
-	$strSQL5 = "UPDATE livro SET operacao = 'V' WHERE id_livro = $id_livro ";
+	$strSQL5 = "UPDATE livro SET operacao = 'V' WHERE id_livro = $idBook ";
 		 $rs5 = mysql_query($strSQL5);
 
 ?>

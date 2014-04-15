@@ -27,11 +27,11 @@ $idUser = $_SESSION['id_usuario'];
         $mural = $_POST['mural'];
 
         include "..\Utilidades\ConexaoComBanco.php";
-        if (!$bd)
+        if (!$dataBase)
             die("<h1>Falha no bd </h1>");
 
         //Acessar Informações do comprador
-        $id_livro = $_POST['id_livro'];
+        $idBook = $_POST['id_livro'];
 
         $email_usuario = $_SESSION["email"];
 
@@ -40,10 +40,10 @@ $idUser = $_SESSION['id_usuario'];
         $rs4 = mysql_query($strSQL4);
 
         while ($row = mysql_fetch_array($rs4)) {
-            $nome_comprador = $row['nome_usuario'];
+            $nameBuyer = $row['nome_usuario'];
         }
 
-        $insere = mysql_query("INSERT INTO mural (texto,nome_pergunta,id_livro) VALUES ('$mural', '$nome_comprador', '$id_livro')");
+        $insere = mysql_query("INSERT INTO mural (texto,nome_pergunta,id_livro) VALUES ('$mural', '$nameBuyer', '$idBook')");
         ?>
 
         <div id="header">
@@ -64,7 +64,7 @@ $idUser = $_SESSION['id_usuario'];
 
         <?php
         include "..\Utilidades\ConexaoComBanco.php";
-        if (!$bd)
+        if (!$dataBase)
             die("<h1>Falha no bd </h1>");
 
         //Acessar Informações do comprador
@@ -74,27 +74,27 @@ $idUser = $_SESSION['id_usuario'];
 
         while ($row = mysql_fetch_array($rs2)) {
 
-            $nome_comprador = $row['nome_usuario'] . "<br />";
-            $tel_comprador = $row['telefone_usuario'] . "<br />";
+            $nameBuyer = $row['nome_usuario'] . "<br />";
+            $phoneBuyer = $row['telefone_usuario'] . "<br />";
         }
 
         //Acessando informações do livro escolhido 
-        $id_livro = $_POST["id_livro"];
+        $idBook = $_POST["id_livro"];
 
-        $id_livro = 1;
+        $idBook = 1;
 
-        $strSQL = "SELECT * FROM livro WHERE id_livro = '$id_livro' ";
+        $stringSQL = "SELECT * FROM livro WHERE id_livro = '$idBook' ";
 
-        $rs = mysql_query($strSQL);
+        $result = mysql_query($stringSQL);
 
-        while ($row = mysql_fetch_array($rs)) {
+        while ($row = mysql_fetch_array($result)) {
 
             $titulo2 = $row['titulo_livro'] . "<br />";
             $estado = $row['estado_conserv'] . "<br />";
             $editora = $row ['editora'] . "<br />";
             $autor = $row ['autor'] . "<br />";
             $descricao = $row ['descricao_livro'] . "<br />";
-            $id_dono = $row['id_dono'] . "<br />";
+            $idOwner = $row['id_dono'] . "<br />";
         }
 
 
@@ -120,10 +120,10 @@ $idUser = $_SESSION['id_usuario'];
         <div id="formulario">
             <form name="comprarlivro" method="post" action="compralivro.php">
 
-                <input type = "hidden" name="nome_comprador" value= "<?php echo $nome_comprador; ?>" >
-                <input type="hidden" name="tel_comprador" value= " <?php echo $tel_comprador; ?>" >
-                <input type="hidden" name="id_livro" value=" <?php echo $id_livro; ?>" >
-                <input type="hidden" name="id_dono" value=" <?php echo $id_dono; ?>" >
+                <input type = "hidden" name="nome_comprador" value= "<?php echo $nameBuyer; ?>" >
+                <input type="hidden" name="tel_comprador" value= " <?php echo $phoneBuyer; ?>" >
+                <input type="hidden" name="id_livro" value=" <?php echo $idBook; ?>" >
+                <input type="hidden" name="id_dono" value=" <?php echo $idOwner; ?>" >
                 <input type="submit" value="Comprar" />
                 <label for="pergunta"></label>
             </form>
@@ -136,7 +136,7 @@ $idUser = $_SESSION['id_usuario'];
                 <br>
                 <textarea name="mural" value="mural" rows="5" cols="45" ></textarea>
                 <input type="hidden" value="nome_comprador" name="nome_comprador">
-                <input type="hidden" name="id_livro" value="<?php echo $id_livro; ?>">
+                <input type="hidden" name="id_livro" value="<?php echo $idBook; ?>">
                 <input type="submit" value="Enviar" />  
             </form>
 
@@ -144,10 +144,10 @@ $idUser = $_SESSION['id_usuario'];
 
 <?php
 include "..\Dao\conexao_bd.inc";
-if (!$bd)
+if (!$dataBase)
     die("<h1>Falha no bd </h1>");
 
-$strSQL3 = "SELECT * FROM mural WHERE id_livro = '" . $id_livro . "' ORDER BY id_comentario DESC";
+$strSQL3 = "SELECT * FROM mural WHERE id_livro = '" . $idBook . "' ORDER BY id_comentario DESC";
 
 $rs3 = mysql_query($strSQL3);
 

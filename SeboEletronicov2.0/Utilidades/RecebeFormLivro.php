@@ -21,10 +21,10 @@ switch($_POST['tipo']){
                          $genero = $_POST['genero'];
                          $estado = $_POST['estado'];
                          $descricao = $_POST['descricao'];
-                         $id_dono = $_POST['id_dono'];
+                         $idOwner = $_POST['id_dono'];
                         
                          
-                        $salvo = LivroControlador::salvaLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $id_dono);
+                        $salvo = LivroControlador::salvaLivro($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao, $idOwner);
                          
                          
                          if (!empty($salvo)){
@@ -48,10 +48,10 @@ switch($_POST['tipo']){
                          $genero = $_POST['genero'];
                          $estado = $_POST['estado'];
                          $descricao = $_POST['descricao'];
-                         $id_dono = $_POST['id_dono'];
+                         $idOwner = $_POST['id_dono'];
                          $id = $_POST['id'];
                         
-                        LivroControlador::alteraLivro($titulo, $autor, $genero, $edicao, $editora,$venda, $troca, $estado, $descricao, $id, $id_dono);
+                        LivroControlador::alteraLivro($titulo, $autor, $genero, $edicao, $editora,$venda, $troca, $estado, $descricao, $id, $idOwner);
                         ?>
                             <script language="Javascript" type="text/javascript">
                                 alert("Livro alterado com sucesso!!");
