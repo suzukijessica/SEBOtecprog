@@ -70,8 +70,8 @@ switch($_POST['tipo']){
                         $disponibilidadeVenda = $_POST['venda'];
                         $disponibilidadeTroca = $_POST['troca'];
 
-                        $listaLivros = LivroControlador::pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
-                        $idLivro = $listaLivros['id_livro'];
+                        $listOfBooks = LivroControlador::pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
+                        $idLivro = $listOfBooks['id_livro'];
                  
                         ?>
                             <script language = "Javascript">

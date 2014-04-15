@@ -8,7 +8,7 @@ session_start();
 include '../Controle/LivroControlador.php';
 $id = $_SESSION['id_usuario'];
 
-$listaLivros = LivroControlador::getAllLivro();
+$listOfBooks = LivroControlador::getAllLivro();
 ?>
 
 <html>
@@ -53,7 +53,7 @@ $listaLivros = LivroControlador::getAllLivro();
                 <tr>
                     <th class='titlein' > <h5>Livros Disponíveis</h5></th>
                 </tr>
-  <?php  foreach($listaLivros as $chave => $valor){ 
+  <?php  foreach($listOfBooks as $chave => $valor){ 
                           ?>              
                 <tr> 
                     <td>

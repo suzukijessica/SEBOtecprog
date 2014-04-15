@@ -9,7 +9,7 @@ $idUser = $_SESSION['id_usuario'];
 
 include '../Controle/LivroControlador.php';
 $id = $_REQUEST['id'];
-$listaLivros = LivroControlador::getLivroById($id);
+$listOfBooks = LivroControlador::getLivroById($id);
 
 ?>
 
@@ -41,7 +41,6 @@ $listaLivros = LivroControlador::getLivroById($id);
        <button class="button" onclick="meusLivros();">Meus Livros</button>
        <button class="button" onclick="livrosDisponiveis();">Livros Disponiveis</button>
        <button class="button" onclick="cadastraLivro();">Cadastrar</button>
-       <!--<button class="button" onclick="deletaLivro();">Deletar</button>-->
        <button class="button" onclick="pesquisaLivro();">Pesquisar</button>
    </div>
     
@@ -61,7 +60,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Título: </h2> 
                          <h6>
-                             <input  type="text" name="titulo" value="<?php echo $listaLivros['titulo_livro']?>" >
+                             <input  type="text" name="titulo" value="<?php echo $listOfBooks['titulo_livro']?>" >
                          </h6>
                     </td>
                 </tr>
@@ -70,7 +69,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td > 
                         <h2> Autor:</h2>
                         <h6>
-                               <input type="text" name="autor" value="<?php echo $listaLivros['autor']?>">
+                               <input type="text" name="autor" value="<?php echo $listOfBooks['autor']?>">
                          </h6>
                     </td>
                 </tr>
@@ -79,7 +78,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Editora: </h2>
                         <h6>
-                               <input type="text" name="editora" value="<?php echo $listaLivros['editora']?>">
+                               <input type="text" name="editora" value="<?php echo $listOfBooks['editora']?>">
                          </h6>
                     </td>
                 </tr>
@@ -88,7 +87,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Edição:</h2> 
                         <h6>
-                                <input type="number" name="edicao" min="1" max="20" step="1" value="<?php echo $listaLivros['edicao']?>">
+                                <input type="number" name="edicao" min="1" max="20" step="1" value="<?php echo $listOfBooks['edicao']?>">
                          </h6>
                     </td>    
                 </tr>
@@ -97,7 +96,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Descrição: </h2>
                         <h6>
-                            <input type="textarea" name="descricao" value="<?php echo $listaLivros['descricao_livro']?>"> 
+                            <input type="textarea" name="descricao" value="<?php echo $listOfBooks['descricao_livro']?>"> 
                         </h6>
                     </td>    
                 </tr>

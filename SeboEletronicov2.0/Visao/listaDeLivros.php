@@ -7,7 +7,7 @@
 include '../Controle/LivroControlador.php';
 $id = $_REQUEST['livros'];
 
-$listaLivros = LivroControlador::getLivroById($id);
+$listOfBooks = LivroControlador::getLivroById($id);
 
 ?>
 
@@ -59,7 +59,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Título: </h2> 
                          <h6>
-                                <?php echo $listaLivros['titulo_livro']?>
+                                <?php echo $listOfBooks['titulo_livro']?>
                          </h6>
                     </td>
                 </tr>
@@ -68,7 +68,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td > 
                         <h2> Autor:</h2>
                         <h6>
-                                <?php echo $listaLivros['autor']?>
+                                <?php echo $listOfBooks['autor']?>
                          </h6>
                     </td>
                 </tr>
@@ -77,7 +77,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Editora: </h2>
                         <h6>
-                                <?php echo $listaLivros['editora']?>
+                                <?php echo $listOfBooks['editora']?>
                          </h6>
                     </td>
                 </tr>
@@ -86,7 +86,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Edição:</h2> 
                         <h6>
-                                <?php echo $listaLivros['edicao']?>
+                                <?php echo $listOfBooks['edicao']?>
                          </h6>
                     </td>    
                 </tr>
@@ -95,7 +95,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Descrição: </h2>
                         <h6>
-                                <?php echo $listaLivros['descricao_livro']?>
+                                <?php echo $listOfBooks['descricao_livro']?>
                         </h6>
                     </td>    
                 </tr>
@@ -104,8 +104,8 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Tipo(s) de operação: </h2>
                         <h6>
-                                <?php echo $listaLivros['venda']?>
-                            <?php echo $listaLivros['troca']?>
+                                <?php echo $listOfBooks['venda']?>
+                            <?php echo $listOfBooks['troca']?>
                         </h6>
                     </td>    
                 </tr>
@@ -114,7 +114,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Classificação: </h2>
                         <h6>
-                                <?php echo $listaLivros['genero']?>
+                                <?php echo $listOfBooks['genero']?>
                         </h6>
                     </td>
                 </tr>
@@ -123,7 +123,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                     <td>
                         <h2> Estado:<h2/> 
                          <h6>
-                             <?php echo $listaLivros['estado_conserv']?>
+                             <?php echo $listOfBooks['estado_conserv']?>
                          </h6>
                     </td>    
                 </tr>
