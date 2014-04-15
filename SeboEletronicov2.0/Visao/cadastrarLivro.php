@@ -5,7 +5,7 @@
 */ 
 
 session_start();
-$id_usuario = $_SESSION['id_usuario'];
+$idUser = $_SESSION['id_usuario'];
  ?>
 <html>
 <head>	
@@ -116,7 +116,7 @@ $id_usuario = $_SESSION['id_usuario'];
                 </tr>
                 <th>
                     <input type="hidden" name="tipo" value="cadastraLivro"/>
-                    <input type="hidden" name="id_dono" value="<?php echo $id_usuario?>"/>
+                    <input type="hidden" name="id_dono" value="<?php echo $idUser?>"/>
                     <input type="submit" name='Enviar' value="ENVIAR" title='Enviar dados' />
                     <input type="reset" name='Limpar' value="LIMPAR DADOS" title='Limpar dados' /> 
                 </th>

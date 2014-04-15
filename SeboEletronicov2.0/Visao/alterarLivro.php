@@ -5,7 +5,7 @@
 */ 
 
 session_start();
-$id_usuario = $_SESSION['id_usuario'];
+$idUser = $_SESSION['id_usuario'];
 
 include '../Controle/LivroControlador.php';
 $id = $_REQUEST['id'];
@@ -139,7 +139,7 @@ $listaLivros = LivroControlador::getLivroById($id);
                <th>
                     <input type="hidden" name="tipo" value="alterarLivro"/>
                     <input type="hidden" name="id" value="<?php echo $id?>"/>
-                    <input type="hidden" name="id_dono" value="<?php echo $id_usuario?>"/>
+                    <input type="hidden" name="id_dono" value="<?php echo $idUser?>"/>
                     <input type="submit" name='Enviar' value="ALTERAR" title='Enviar dados'/>
                 </th>
                 

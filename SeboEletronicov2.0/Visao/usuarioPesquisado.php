@@ -5,7 +5,7 @@
 */
 
     session_start();
-    $id_usuario = $_SESSION['id_usuario'];
+    $idUser = $_SESSION['id_usuario'];
     include '../Controle/UsuarioControlador.php';
     $nome = $_REQUEST['nome'];
     $pesquisado = UsuarioControlador::pesquisaUsuario($nome);
