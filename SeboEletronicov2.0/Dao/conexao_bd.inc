@@ -1,12 +1,13 @@
 <?php
+
 /*
- File name: conexao_bd.php
- File description: connect with database
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
-*/
-	$connect = mysql_connect("localhost", "root", "");
-		if (!$connect) die ("<h1>Falha na Conexao </h1>");
-				
-		$dataBase = mysql_select_db ("sebo eletronico");		
-		
+  File name: conexao_bd.php
+  File description: connect with database
+  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+ */
+$connect = mysql_connect("localhost", "root", "");
+if (!$connect)
+    die("<h1>Falha na Conexao </h1>");
+
+$dataBase = mysql_select_db("sebo eletronico");
 ?>

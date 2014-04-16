@@ -142,22 +142,22 @@ $idUser = $_SESSION['id_usuario'];
 
             <br/><br/><br/>
 
-<?php
-include "..\Dao\conexao_bd.inc";
-if (!$dataBase)
-    die("<h1>Falha no bd </h1>");
+            <?php
+            include "..\Dao\conexao_bd.inc";
+            if (!$dataBase)
+                die("<h1>Falha no bd </h1>");
 
-$strSQL3 = "SELECT * FROM mural WHERE id_livro = '" . $idBook . "' ORDER BY id_comentario DESC";
+            $strSQL3 = "SELECT * FROM mural WHERE id_livro = '" . $idBook . "' ORDER BY id_comentario DESC";
 
-$rs3 = mysql_query($strSQL3);
+            $rs3 = mysql_query($strSQL3);
 
-while ($row3 = mysql_fetch_array($rs3)) {
-    echo $row3['nome_pergunta'];
-    echo " disse: ";
-    echo $row3['texto'];
-    echo " <br /> <br />";
-}
-?> 
+            while ($row3 = mysql_fetch_array($rs3)) {
+                echo $row3['nome_pergunta'];
+                echo " disse: ";
+                echo $row3['texto'];
+                echo " <br /> <br />";
+            }
+            ?> 
 
         </div>
 

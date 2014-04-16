@@ -1,9 +1,10 @@
 <?php
+
 /*
- File name: autenticacaoUsuario.php
- File description: check email and password of user
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
-*/
+  File name: autenticacaoUsuario.php
+  File description: check email and password of user
+  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+ */
 include '../Utilidades/ConexaoComBanco.php';
 
 
@@ -12,25 +13,25 @@ $email = $_POST['email'];
 
 $password = $_POST['senha'];
 
-$sql = mysql_query("SELECT * FROM usuario WHERE email_usuario = '".$email."'") or die(mysql_error());
-$sql2 = mysql_query("SELECT * FROM senha WHERE codigo_senha ='".$password."'");
+$sql = mysql_query("SELECT * FROM usuario WHERE email_usuario = '" . $email . "'") or die(mysql_error());
+$sql2 = mysql_query("SELECT * FROM senha WHERE codigo_senha ='" . $password . "'");
 $row = mysql_num_rows($sql);
 $row2 = mysql_num_rows($sql2);
 
 $usuario = mysql_fetch_array($sql);
 $idUsuario = $usuario['id_usuario'];
-if($row == $row2){
-    if($row>0){
+if ($row == $row2) {
+    if ($row > 0) {
         session_start();
-        $_SESSION['email']= $email;
-        $_SESSION['senha']= $password;
+        $_SESSION['email'] = $email;
+        $_SESSION['senha'] = $password;
         $_SESSION['id_usuario'] = $idUsuario;
         //echo "<script>alert('Seja bem vindo ao SEBO Eletronico!')</script>";
         echo"<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php'</script>";
     }
-}else{
-        echo "<script>alert('Email de usuario ou senha invalido, tente novamente!')</script>";
-        echo "<script>  window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/entrarLogin.php'</script>"; 
-    }
+} else {
+    echo "<script>alert('Email de usuario ou senha invalido, tente novamente!')</script>";
+    echo "<script>  window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/entrarLogin.php'</script>";
+}
 ?>
 

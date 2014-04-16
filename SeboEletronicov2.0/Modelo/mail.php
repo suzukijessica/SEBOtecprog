@@ -1,14 +1,15 @@
 <?php
+
 /*
- File name: mail.php
- File description: model of email
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
-*/ 
+  File name: mail.php
+  File description: model of email
+  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+ */
 
 include 'Usuario.php';
 
 $destinatario = Usuario::getEmail();
-$mensagem ='<html>
+$mensagem = '<html>
 				<body>
 					<table background = "http://i.imgur.com/GX69Php.jpg" height = "800" width=" 650" padding-top = "300" padding-right= "100" padding-bottom ="300" padding-left= "100">
 							
@@ -26,15 +27,15 @@ $mensagem ='<html>
 				</html>';
 
 
-$subject= 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico'; 
+$subject = 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico';
 // Subject
-$to= $destinatario; 
+$to = $destinatario;
 // Receiver
-$body= $mensagem; 
+$body = $mensagem;
 // Body of the text message.
 
-if (mail($to,$subject,$body,"Content-Type: text/html"))
-echo 'e-mail enviado com sucesso!';
+if (mail($to, $subject, $body, "Content-Type: text/html"))
+    echo 'e-mail enviado com sucesso!';
 else
-echo 'e-mail nao enviado!';
+    echo 'e-mail nao enviado!';
 ?>
