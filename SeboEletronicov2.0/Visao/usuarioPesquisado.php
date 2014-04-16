@@ -8,7 +8,7 @@
     $idUser = $_SESSION['id_usuario'];
     include '../Controle/UsuarioControlador.php';
     $name = $_REQUEST['nome'];
-    $pesquisado = UsuarioControlador::pesquisaUsuario($name);
+    $searchUser = UsuarioControlador::pesquisaUsuario($name);
        
 ?>
 <!DOCTYPE HTML>
@@ -55,19 +55,19 @@
         
                 <tr>
                     <td > 
-                      <center> Nome: <?php echo $pesquisado[1];?></center> 
+                      <center> Nome: <?php echo $searchUser[1];?></center> 
                     </td>
                 </tr>
                 
                 <tr>
                     <td > 
-                   <center> Telefone :<?php echo $pesquisado[3];?></center> 
+                   <center> Telefone :<?php echo $searchUser[3];?></center> 
                     </td>
                 </tr>
                 
                 <tr>
                     <td > 
-                <center>  Email: <?php echo $pesquisado[4];?></center>
+                <center>  Email: <?php echo $searchUser[4];?></center>
                     </td>
                 </tr>
                 </table>    
