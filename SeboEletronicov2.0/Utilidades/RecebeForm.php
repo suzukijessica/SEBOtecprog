@@ -10,12 +10,12 @@ include_once '../Controle/UsuarioControlador.php';
 switch($_POST['tipo']){
 //switch action selection to be held in the register book, register, change, or delete search
     
-      case "cadastrar":  $nome = $_POST['nome'];
+      case "cadastrar":  $name = $_POST['nome'];
                          $email = $_POST['email'];
                          $telefone = $_POST['telefone'];
-                         $senha = $_POST['senha'];
+                         $password = $_POST['senha'];
                          
-                         UsuarioControlador::salvaUsuario($nome, $email, $telefone, $senha);
+                         UsuarioControlador::salvaUsuario($name, $email, $telefone, $password);
                          ?>
 
                             <script language="Javascript" type="text/javascript">
@@ -29,14 +29,14 @@ switch($_POST['tipo']){
                             
                           break;
                       
-      case "alterar":   $nome = $_POST['nome'];
+      case "alterar":   $name = $_POST['nome'];
                         $email = $_POST['email'];
                         $telefone = $_POST['telefone'];
-                        $senha = $_POST['senha'];
+                        $password = $_POST['senha'];
                         $id = $_POST['id_pessoa'];
                         $senhaVelha = $_POST['senhaAntiga'];
                         
-                        UsuarioControlador::alterarCadastro($nome, $email, $telefone, $senha, $id, $senhaVelha);
+                        UsuarioControlador::alterarCadastro($name, $email, $telefone, $password, $id, $senhaVelha);
                         ?>
                             
                             <script language="Javascript" type="text/javascript">
@@ -51,9 +51,9 @@ switch($_POST['tipo']){
                         
                     break;
       case "deletar": $email = $_POST['email'];
-                      $senha = $_POST['senha'];
+                      $password = $_POST['senha'];
                       
-                      UsuarioControlador::deletaCadastro($email,$senha);
+                      UsuarioControlador::deletaCadastro($email,$password);
                       ?>
                             <script language="Javascript" type="text/javascript">
                                 alert("Usuario excluido  com sucesso!!");
@@ -64,12 +64,12 @@ switch($_POST['tipo']){
                             </script>
                       <?php
                     break;
-      case "pesquisar": $nome = $_POST['nome'];
+      case "pesquisar": $name = $_POST['nome'];
                         
                         
                       ?>
                             <script language = "Javascript">
-                            window.location="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/usuarioPesquisado.php?nome=<?php echo $nome?>";
+                            window.location="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/usuarioPesquisado.php?nome=<?php echo $name?>";
                             </script><?php
             
                     break;

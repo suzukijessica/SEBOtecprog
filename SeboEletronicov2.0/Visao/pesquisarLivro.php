@@ -32,7 +32,6 @@
        <button class="button" onclick="meusLivros();">Meus Livros</button>
        <button class="button" onclick="livrosDisponiveis();">Livros Disponiveis</button>
        <button class="button" onclick="cadastraLivro();">Cadastrar</button>
-       <!--<button class="button" onclick="deletaLivro();">Deletar</button>-->
        <button class="button" onclick="pesquisaLivro();">Pesquisar</button>
        
        

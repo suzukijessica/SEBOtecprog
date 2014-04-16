@@ -6,7 +6,7 @@
 
 session_start();
 $idUser = $_SESSION['id_usuario'];
-$senha = $_SESSION['senha'];
+$password = $_SESSION['senha'];
 include '../Controle/UsuarioControlador.php';
 $register = UsuarioControlador::checaCadastroId($idUser);
 
@@ -65,7 +65,7 @@ $register = UsuarioControlador::checaCadastroId($idUser);
                 <th>
                     <input type="hidden" name="tipo" value="deletar"/>
                     <input type="hidden" name="email" value="<?php echo $register['email_usuario']?>"/>
-                    <input type="hidden" name="senha" value="<?php echo $senha?>"/>
+                    <input type="hidden" name="senha" value="<?php echo $password?>"/>
                     <input type="submit" name='Enviar' value="Excluir" title='Excluir Usuário' />
                 </th>
 

@@ -6,8 +6,8 @@
 */       
         $server = "localhost";
         $username = "root";
-        $senha = "";
-        $dbcon = mysql_connect($server, $username, $senha);
+        $password = "";
+        $dbcon = mysql_connect($server, $username, $password);
         
         if(!$dbcon){
             die ("Não foi possível conectar: " . mysql_error());
