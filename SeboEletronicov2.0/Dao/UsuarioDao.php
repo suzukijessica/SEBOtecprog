@@ -47,6 +47,9 @@ class UsuarioDao {
 
             $sql3 = "Update senha SET codigo_senha = '" . $senhaAlterar . "' WHERE id_senha = '" . $id_senha[0] . "'";
             $senhaSalva = mysql_query($sql3);
+        } else{
+            //nothing to do - proceed to the next step function
+            
         }
 
         return ($usuario && $senhaSalva);

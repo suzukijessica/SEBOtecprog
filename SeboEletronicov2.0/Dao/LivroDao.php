@@ -49,7 +49,10 @@ class LivroDao {
 
         if (!(empty($listaLivros))) {
             return false;
+        } else {
+            //nothing to do - proceed to the next step function
         }
+        
 
         return $listaLivros;
     }
@@ -92,6 +95,8 @@ class LivroDao {
 
         if (!(empty($livros))) {
             return false;
+        } else{
+            //nothing to do - proceed to the next step function
         }
 
         return $livros;
@@ -109,6 +114,8 @@ class LivroDao {
 
         if (count($livros) == 0) {
             return false;
+        } else{
+            //nothing to do - proceed to the next step function
         }
 
         return $livros;

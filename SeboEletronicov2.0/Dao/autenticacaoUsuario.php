@@ -21,6 +21,7 @@ $row2 = mysql_num_rows($sql2);
 $usuario = mysql_fetch_array($sql);
 $idUsuario = $usuario['id_usuario'];
 if ($row == $row2) {
+    
     if ($row > 0) {
         session_start();
         $_SESSION['email'] = $email;
@@ -28,10 +29,15 @@ if ($row == $row2) {
         $_SESSION['id_usuario'] = $idUsuario;
         //echo "<script>alert('Seja bem vindo ao SEBO Eletronico!')</script>";
         echo"<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php'</script>";
+    } else {
+        //nothing to do - proceed to the next step function
+        
     }
+    
 } else {
     echo "<script>alert('Email de usuario ou senha invalido, tente novamente!')</script>";
     echo "<script>  window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/entrarLogin.php'</script>";
+    
 }
 ?>
 
