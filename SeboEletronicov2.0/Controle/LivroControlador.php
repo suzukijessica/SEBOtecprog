@@ -15,6 +15,9 @@ class LivroControlador {
         if (empty($venda) && empty($troca)) {
             $venda = "venda";
             $troca = "troca";
+        } else{
+            //nothing to do - proceed to the next step function
+            
         }
 
         try {
@@ -46,6 +49,9 @@ class LivroControlador {
         if (empty($venda) && empty($troca)) {
             $venda = "venda";
             $troca = "troca";
+        } else {
+            //nothing to do - proceed to the next step function
+            
         }
 
         try {
