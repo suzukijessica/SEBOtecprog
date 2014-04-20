@@ -8,8 +8,8 @@
 
 class ExcessaoTituloInvalido extends Exception {
 
-    function __construct($mensagem) {
-        parent::__construct($mensagem);
+    function __construct($message) {
+        parent::__construct($message);
     }
 
 }
