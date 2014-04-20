@@ -6,7 +6,7 @@
 
 session_start();
 include '../Controle/LivroControlador.php';
-$id = $_SESSION['id_usuario'];
+$userId = $_SESSION['id_usuario'];
 
 $listOfBooks = LivroControlador::getAllLivro();
 ?>

@@ -8,8 +8,8 @@ session_start();
 $idUser = $_SESSION['id_usuario'];
 
 include '../Controle/LivroControlador.php';
-$id = $_REQUEST['id'];
-$listOfBooks = LivroControlador::getLivroById($id);
+$userId = $_REQUEST['id'];
+$listOfBooks = LivroControlador::getLivroById($userId);
 ?>
 
 <html>
@@ -136,7 +136,7 @@ $listOfBooks = LivroControlador::getLivroById($id);
 
                 <th>
                     <input type="hidden" name="tipo" value="alterarLivro"/>
-                    <input type="hidden" name="id" value="<?php echo $id ?>"/>
+                    <input type="hidden" name="id" value="<?php echo $userId ?>"/>
                     <input type="hidden" name="id_dono" value="<?php echo $idUser ?>"/>
                     <input type="submit" name='Enviar' value="ALTERAR" title='Enviar dados'/>
                 </th>

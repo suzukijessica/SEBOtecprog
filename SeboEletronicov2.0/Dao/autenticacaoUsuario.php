@@ -9,12 +9,12 @@ include '../Utilidades/ConexaoComBanco.php';
 
 
 
-$email = $_POST['email'];
+$userEmail = $_POST['email'];
 
-$password = $_POST['senha'];
+$userPassword = $_POST['senha'];
 
-$sql = mysql_query("SELECT * FROM usuario WHERE email_usuario = '" . $email . "'") or die(mysql_error());
-$sql2 = mysql_query("SELECT * FROM senha WHERE codigo_senha ='" . $password . "'");
+$sql = mysql_query("SELECT * FROM usuario WHERE email_usuario = '" . $userEmail . "'") or die(mysql_error());
+$sql2 = mysql_query("SELECT * FROM senha WHERE codigo_senha ='" . $userPassword . "'");
 $row = mysql_num_rows($sql);
 $row2 = mysql_num_rows($sql2);
 
@@ -24,8 +24,8 @@ if ($row == $row2) {
     
     if ($row > 0) {
         session_start();
-        $_SESSION['email'] = $email;
-        $_SESSION['senha'] = $password;
+        $_SESSION['email'] = $userEmail;
+        $_SESSION['senha'] = $userPassword;
         $_SESSION['id_usuario'] = $idUsuario;
         //echo "<script>alert('Seja bem vindo ao SEBO Eletronico!')</script>";
         echo"<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php'</script>";

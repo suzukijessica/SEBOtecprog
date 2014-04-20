@@ -48,9 +48,9 @@ switch ($_POST['tipo']) {
         $preservation = $_POST['estado'];
         $description = $_POST['descricao'];
         $idOwner = $_POST['id_dono'];
-        $id = $_POST['id'];
+        $userId = $_POST['id'];
 
-        LivroControlador::alteraLivro($titulo, $author, $genero, $edicao, $publishing, $venda, $troca, $preservation, $description, $id, $idOwner);
+        LivroControlador::alteraLivro($titulo, $author, $genero, $edicao, $publishing, $venda, $troca, $preservation, $description, $userId, $idOwner);
         ?>
         <script language="Javascript" type="text/javascript">
             alert("Livro alterado com sucesso!!");
