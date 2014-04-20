@@ -90,11 +90,11 @@ $idUser = $_SESSION['id_usuario'];
         while ($row = mysql_fetch_array($result)) {
 
             $titulo2 = $row['titulo_livro'] . "<br />";
-            $preservation = $row['estado_conserv'] . "<br />";
-            $publishing = $row ['editora'] . "<br />";
-            $author = $row ['autor'] . "<br />";
-            $description = $row ['descricao_livro'] . "<br />";
-            $idOwner = $row['id_dono'] . "<br />";
+            $bookCondition = $row['estado_conserv'] . "<br />";
+            $bookPublisher = $row ['editora'] . "<br />";
+            $bookAuthor = $row ['autor'] . "<br />";
+            $bookDescription = $row ['descricao_livro'] . "<br />";
+            $id_book_owner = $row['id_dono'] . "<br />";
         }
 
 
@@ -104,16 +104,16 @@ $idUser = $_SESSION['id_usuario'];
         echo '</h1> </h6><br /><br />';
 
         echo'<h6>Autor: ';
-        echo $author;
+        echo $bookAuthor;
         echo'</h6><br />';
 
         echo'<h6>Editora: ';
-        echo $publishing;
+        echo $bookPublisher;
         echo'</h6><br />';
 
 
         echo'<h6>Descricao: ';
-        echo $description;
+        echo $bookDescription;
         echo'</h6><br /><br />';
         ?>
 
@@ -123,7 +123,7 @@ $idUser = $_SESSION['id_usuario'];
                 <input type = "hidden" name="nome_comprador" value= "<?php echo $nameBuyer; ?>" >
                 <input type="hidden" name="tel_comprador" value= " <?php echo $phoneBuyer; ?>" >
                 <input type="hidden" name="id_livro" value=" <?php echo $idBook; ?>" >
-                <input type="hidden" name="id_dono" value=" <?php echo $idOwner; ?>" >
+                <input type="hidden" name="id_dono" value=" <?php echo $id_book_owner; ?>" >
                 <input type="submit" value="Comprar" />
                 <label for="pergunta"></label>
             </form>

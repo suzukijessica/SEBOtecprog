@@ -44,12 +44,12 @@ $idUser = $_SESSION['id_usuario'];
         $phoneBuyer = $_POST ['tel_comprador'];
         $nameBuyer = $_POST['nome_comprador'];
         $idBook = $_POST['id_livro'];
-        $idOwner = $_POST['id_dono'];
+        $id_book_owner = $_POST['id_dono'];
 
 
 
 //Dados Vendedor
-        $stringSQL = "SELECT * FROM usuario WHERE id_usuario = '$idOwner' ";
+        $stringSQL = "SELECT * FROM usuario WHERE id_usuario = '$id_book_owner' ";
 
         $result = mysql_query($stringSQL);
 

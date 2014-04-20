@@ -15,7 +15,7 @@ switch ($_POST['tipo']) {
         $userTelphone = $_POST['telefone'];
         $userPassword = $_POST['senha'];
 
-        UsuarioControlador::salvaUsuario($username, $userEmail, $userTelphone, $userPassword);
+        UsuarioControlador::salvaUsuario($username, $userEmail, $userTelephone, $userPassword);
         ?>
 
         <script language="Javascript" type="text/javascript">

@@ -12,19 +12,19 @@ switch ($_POST['tipo']) {
 //switch action selection to be held in the register book, register, change, or delete search     
 
     case "cadastraLivro":
-        $titulo = $_POST['titulo'];
-        $author = $_POST['autor'];
-        $publishing = $_POST['editora'];
-        $edicao = $_POST['edicao'];
-        $venda = $_POST['venda'];
-        $troca = $_POST['troca'];
-        $genero = $_POST['genero'];
-        $preservation = $_POST['estado'];
-        $description = $_POST['descricao'];
-        $idOwner = $_POST['id_dono'];
+        $bookTitle = $_POST['titulo'];
+        $bookAuthor = $_POST['autor'];
+        $bookPublisher = $_POST['editora'];
+        $bookEdition = $_POST['edicao'];
+        $bookForSale = $_POST['venda'];
+        $bookForExchange = $_POST['troca'];
+        $bookGender = $_POST['genero'];
+        $bookCondition = $_POST['estado'];
+        $bookDescription = $_POST['descricao'];
+        $id_book_owner = $_POST['id_dono'];
 
 
-        $salvo = LivroControlador::salvaLivro($titulo, $author, $genero, $edicao, $publishing, $venda, $troca, $preservation, $description, $idOwner);
+        $salvo = LivroControlador::salvaLivro($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $id_book_owner);
 
 
         if (!empty($salvo)) {
@@ -38,19 +38,19 @@ switch ($_POST['tipo']) {
         break;
 
     case "alterarLivro":
-        $titulo = $_POST['titulo'];
-        $author = $_POST['autor'];
-        $publishing = $_POST['editora'];
-        $edicao = $_POST['edicao'];
-        $venda = $_POST['venda'];
-        $troca = $_POST['troca'];
-        $genero = $_POST['genero'];
-        $preservation = $_POST['estado'];
-        $description = $_POST['descricao'];
-        $idOwner = $_POST['id_dono'];
+        $bookTitle = $_POST['titulo'];
+        $bookAuthor = $_POST['autor'];
+        $bookPublisher = $_POST['editora'];
+        $bookEdition = $_POST['edicao'];
+        $bookForSale = $_POST['venda'];
+        $bookForExchange = $_POST['troca'];
+        $bookGender = $_POST['genero'];
+        $bookCondition = $_POST['estado'];
+        $bookDescription = $_POST['descricao'];
+        $id_book_owner = $_POST['id_dono'];
         $userId = $_POST['id'];
 
-        LivroControlador::alteraLivro($titulo, $author, $genero, $edicao, $publishing, $venda, $troca, $preservation, $description, $userId, $idOwner);
+        LivroControlador::alteraLivro($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $userId, $id_book_owner);
         ?>
         <script language="Javascript" type="text/javascript">
             alert("Livro alterado com sucesso!!");
@@ -62,24 +62,24 @@ switch ($_POST['tipo']) {
         break;
 
     case "pesquisaLivro":
-        $titulo = $_POST['titulo'];
+        $bookTitle = $_POST['titulo'];
         $estadoNovo = $_POST['novo'];
         $estadoUsado = $_POST['usado'];
         $disponibilidadeVenda = $_POST['venda'];
         $disponibilidadeTroca = $_POST['troca'];
 
-        $listOfBooks = LivroControlador::pesquisaLivro($titulo, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
-        $idLivro = $listOfBooks['id_livro'];
+        $listOfBooks = LivroControlador::pesquisaLivro($bookTitle, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
+        $idBook = $listOfBooks['id_livro'];
         ?>
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/listaDeLivros.php?livros=<?php echo $idLivro ?>";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/listaDeLivros.php?livros=<?php echo $idBook ?>";
         </script><?php
         break;
 }
 
 if ($_REQUEST['id_livro']) {
-    $idLivro = $_REQUEST['id_livro'];
-    LivroControlador::deletaLivro($idLivro);
+    $idBook = $_REQUEST['id_livro'];
+    LivroControlador::deletaLivro($idBook);
     ?>
     <script language="Javascript" type="text/javascript">
         alert("Livro excluido com sucesso!!");
