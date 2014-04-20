@@ -8,9 +8,9 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$dbcon = mysql_connect($server, $username, $password);
+$database_conexion = mysql_connect($server, $username, $password);
 
-if (!$dbcon) {
+if (!$database_conexion) {
     die("Não foi possível conectar: " . mysql_error());
 }
 $dataBase = mysql_select_db("sebo eletronico");
