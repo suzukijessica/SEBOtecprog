@@ -8,8 +8,8 @@
 
 include 'Usuario.php';
 
-$destinatario = Usuario::getEmail();
-$mensagem = '<html>
+$receiver = Usuario::getEmail();
+$message = '<html>
 				<body>
 					<table background = "http://i.imgur.com/GX69Php.jpg" height = "800" width=" 650" padding-top = "300" padding-right= "100" padding-bottom ="300" padding-left= "100">
 							
@@ -29,9 +29,9 @@ $mensagem = '<html>
 
 $subject = 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico';
 // Subject
-$to = $destinatario;
+$to = $receiver;
 // Receiver
-$body = $mensagem;
+$body = $message;
 // Body of the text message.
 
 if (mail($to, $subject, $body, "Content-Type: text/html"))
