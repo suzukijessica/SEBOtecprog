@@ -15,17 +15,17 @@ include '../Dao/UsuarioDao.php';
 
 class Usuario {
 
-    private $nome;
-    private $telefone;
+    private $name;
+    private $telephone;
     private $email;
-    private $senha;
+    private $password;
 
-    public function __construct($nome, $telefone, $email, $senha) {
+    public function __construct($name, $telephone, $email, $password) {
         //Constructor method of class
-        $this->setNome($nome);
-        $this->setTelefone($telefone);
+        $this->setNome($name);
+        $this->setTelefone($telephone);
         $this->setEmail($email);
-        $this->setSenha($senha);
+        $this->setSenha($password);
     }
 
     public function getNome() {
@@ -33,17 +33,17 @@ class Usuario {
         return $this->nome;
     }
 
-    public function setNome($nome) {
+    public function setNome($name) {
         //Method to modify the instance of the name attribute 
 
-        if (!ValidaDados::validaCamposNulos($nome)) {
+        if (!ValidaDados::validaCamposNulos($name)) {
             throw new ExcessaoNomeInvalido("Nome nao pode ser nulo!");
-        } elseif (ValidaDados::validaNome($nome) == 1) {
+        } elseif (ValidaDados::validaNome($name) == 1) {
             throw new ExcessaoNomeInvalido("Nome contem caracteres invalidos!");
-        } elseif (ValidaDados::validaNome($nome) == 2) {
+        } elseif (ValidaDados::validaNome($name) == 2) {
             throw new ExcessaoNomeInvalido("Nome contem espaços seguidos!");
         } else {
-            $this->nome = $nome;
+            $this->nome = $name;
         }
     }
 
@@ -52,17 +52,17 @@ class Usuario {
         return $this->telefone;
     }
 
-    public function setTelefone($telefone) {
+    public function setTelefone($telephone) {
         //Method to modify the instance of the telephone attribute 
 
-        if (!ValidaDados::validaCamposNulos($telefone)) {
+        if (!ValidaDados::validaCamposNulos($telephone)) {
             throw new ExcessaoTelefoneInvalido("Telefone nao pode ser nulo!");
         } elseif (ValidaDados::validaTelefone($telefone) == 1) {
             throw new ExcessaoTelefoneInvalido("Telefone nao pode conter caracteres alfabeticos!");
-        } elseif (ValidaDados::validaTelefone($telefone) == 2) {
+        } elseif (ValidaDados::validaTelefone($telephone) == 2) {
             throw new ExcessaoTelefoneInvalido("Telefone deve conter exatamente oito (8) digitos!");
         } else {
-            $this->telefone = $telefone;
+            $this->telefone = $telephone;
         }
     }
 
@@ -88,12 +88,12 @@ class Usuario {
         return $this->senha;
     }
 
-    public function setSenha($senha) {
+    public function setSenha($password) {
         //Method to modify the instance of the password attribute   
 
-        $auxiliar = ValidaDados::validaSenha($senha);
+        $auxiliar = ValidaDados::validaSenha($password);
 
-        if (!ValidaDados::validaSenhaNula($senha)) {
+        if (!ValidaDados::validaSenhaNula($password)) {
             throw new ExcessaoSenhaInvalida("Senha nao pode ser nula!");
         } elseif ($auxiliar == 1) {
             throw new ExcessaoSenhaInvalida("Senha contem caracteres invalidos!");
@@ -102,7 +102,7 @@ class Usuario {
         } elseif ($auxiliar == 3) {
             throw new ExcessaoSenhaInvalida("Senha e confirmação estão diferentes!");
         } else {
-            $this->senha = $senha;
+            $this->senha = $password;
         }
     }
 
