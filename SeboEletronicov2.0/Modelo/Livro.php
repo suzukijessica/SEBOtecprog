@@ -14,26 +14,26 @@ include '../Utilidades/ExcessaoEditoraInvalida.php';
 
 class Livro {
 
-    private $titulo;
-    private $autor;
+    private $title;
+    private $author;
     private $genero;
-    private $edicao;
-    private $editora;
-    private $venda;
-    private $troca;
-    private $estado;
+    private $edition;
+    private $publisher;
+    private $sale;
+    private $swap;
+    private $status;
     private $descricao;
 
-    function __construct($titulo, $autor, $genero, $edicao, $editora, $venda, $troca, $estado, $descricao) {
+    function __construct($title, $author, $genero, $edition, $publisher, $sale, $swap, $status, $descricao) {
         //Constructor method of class
-        $this->setTitulo($titulo);
-        $this->setAutor($autor);
+        $this->setTitulo($title);
+        $this->setAutor($author);
         $this->setGenero($genero);
-        $this->setEdicao($edicao);
-        $this->setEditora($editora);
-        $this->setVenda($venda);
-        $this->setTroca($troca);
-        $this->setEstado($estado);
+        $this->setEdicao($edition);
+        $this->setEditora($publisher);
+        $this->setVenda($sale);
+        $this->setTroca($swap);
+        $this->setEstado($status);
         $this->setDescricao($descricao);
     }
 
@@ -42,12 +42,12 @@ class Livro {
         return $this->titulo;
     }
 
-    public function setTitulo($titulo) {
+    public function setTitulo($title) {
         //Method to modify the instance of the title attribute
-        if (!ValidaDados::validaCamposnulos($titulo)) {
+        if (!ValidaDados::validaCamposnulos($title)) {
             throw new ExcessaoTituloInvalido("Titulo nao pode ser nulo!");
         } else {
-            $this->titulo = $titulo;
+            $this->titulo = $title;
         }
     }
 
@@ -56,16 +56,16 @@ class Livro {
         return $this->autor;
     }
 
-    public function setAutor($autor) {
+    public function setAutor($author) {
         //Method to modify the instance of the author attribute
-        if (!ValidaDados::validaCamposNulos($autor)) {
+        if (!ValidaDados::validaCamposNulos($author)) {
             throw new ExcessaoNomeInvalido("O nome do Autor nao pode ser nulo!");
-        } elseif (ValidaDados::validaNome($autor) == 1) {
+        } elseif (ValidaDados::validaNome($author) == 1) {
             throw new ExcessaoNomeInvalido("Nome do Autor contem caracteres invalidos!");
-        } elseif (ValidaDados::validaNome($autor) == 2) {
+        } elseif (ValidaDados::validaNome($author) == 2) {
             throw new ExcessaoNomeInvalido("Nome do Autor contem espaços seguidos!");
         } else {
-            $this->autor = $autor;
+            $this->autor = $author;
         }
     }
 
@@ -84,9 +84,9 @@ class Livro {
         return $this->troca;
     }
 
-    public function setTroca($troca) {
+    public function setTroca($swap) {
         //Method to modify the instance of switch attribute
-        $this->troca = $troca;
+        $this->troca = $swap;
     }
 
     public function getVenda() {
@@ -94,9 +94,9 @@ class Livro {
         return $this->venda;
     }
 
-    public function setVenda($venda) {
+    public function setVenda($sale) {
         //Method to modify the instance of the sale attribute
-        $this->venda = $venda;
+        $this->venda = $sale;
     }
 
     public function getDescricao() {
@@ -126,9 +126,9 @@ class Livro {
         return $this->edicao;
     }
 
-    public function setEdicao($edicao) {
+    public function setEdicao($edition) {
         //Method to modify the instance of the edition attribute
-        $this->edicao = $edicao;
+        $this->edicao = $edition;
     }
 
     public function getEditora() {
@@ -136,13 +136,13 @@ class Livro {
         return $this->editora;
     }
 
-    public function setEditora($editora) {
+    public function setEditora($publisher) {
         //Method to modify the instance of the publishing house attribute
 
-        if (!ValidaDados::validaCamposNulos($editora)) {
+        if (!ValidaDados::validaCamposNulos($publisher)) {
             throw new ExcessaoEditoraInvalida("A Editora do Livro nao pode ser nula!");
         } else {
-            $this->editora = $editora;
+            $this->editora = $publisher;
         }
     }
 
@@ -151,9 +151,9 @@ class Livro {
         return $this->estado;
     }
 
-    public function setEstado($estado) {
+    public function setEstado($status) {
         //Method to modify the instance of the status attribute
-        $this->estado = $estado;
+        $this->estado = $status;
     }
 
 }
