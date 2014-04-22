@@ -8,29 +8,29 @@
 
 class ValidaDados {
 
-    public function validaCamposNulos($parametro) {
-        return !(empty($parametro));
+    public function validaCamposNulos($field) {
+        return !(empty($field));
         // returns true if the variable is empty 
         // with this, the value false eh inverted and sent as true
     }
 
-    public function validaSenhaNula($senha) {
+    public function validaSenhaNula($password) {
         //Check if password is null
-        return (!(empty($senha[0])) && !(empty($senha[1])));
+        return (!(empty($password[0])) && !(empty($password[1])));
     }
 
-    public function validaNome($nome) {
+    public function validaNome($name) {
         //Check name provided by user
 
-        $caracteresValidos = '. abcdefghijklmnopqrstuvwxyzçãõáíóúàòìù';
+        $validCharacters = '. abcdefghijklmnopqrstuvwxyzçãõáíóúàòìù';
 
-        for ($i = 0; $i < strlen($nome); $i++) {
-            $char = stripos($caracteresValidos, $nome[$i]);
-            if (!$char) {
+        for ($i = 0; $i < strlen($name); $i++) {
+            $character = stripos($validCharacters, $name[$i]);
+            if (!$character) {
                 return 1;
             }
 
-            if ($nome[$i] == " " && $nome[$i + 1] == " ") {
+            if ($name[$i] == " " && $name[$i + 1] == " ") {
                 return 2;
             }
         }
@@ -44,24 +44,24 @@ class ValidaDados {
         }
     }
 
-    public function validaTelefone($telefone) {
+    public function validaTelefone($telphone) {
         //Check telephone provided by user
 
-        if (!filter_var($telefone, FILTER_VALIDATE_INT)) {
+        if (!filter_var($telphone, FILTER_VALIDATE_INT)) {
             return 1;
-        } elseif (strlen($telefone) != 8) {
+        } elseif (strlen($telphone) != 8) {
             return 2;
         }
     }
 
-    public function validaSenha($senha) {
+    public function validaSenha($password) {
         //Check password provided by user
 
-        if (!filter_var($senha[0], FILTER_VALIDATE_INT)) {//caracter invalido
+        if (!filter_var($password[0], FILTER_VALIDATE_INT)) {//caracter invalido
             return 1;
-        } elseif (strlen($senha[0]) != 6 || strlen($senha[1]) != 6) {//tamanho invalido
+        } elseif (strlen($password[0]) != 6 || strlen($password[1]) != 6) {//tamanho invalido
             return 2;
-        } elseif ($senha[0] != $senha[1]) {//senha e confirmação diferentes
+        } elseif ($password[0] != $password[1]) {//senha e confirmação diferentes
             return 3;
         }
     }
