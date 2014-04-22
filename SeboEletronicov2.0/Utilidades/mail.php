@@ -7,8 +7,8 @@
  */
 include 'Usuario.php';
 
-$destinatario = Usuario::getEmail();
-$mensagem = '<html>
+$addressee = Usuario::getEmail();
+$message = '<html>
 				<body>
 					<table background = "http://i.imgur.com/GX69Php.jpg" height = "800" width=" 650" padding-top = "300" padding-right= "100" padding-bottom ="300" padding-left= "100">
 							
@@ -27,9 +27,9 @@ $mensagem = '<html>
 
 
 $subject = 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico'; // Assunto.
-$to = $destinatario; // Para.
-$body = $mensagem; // corpo do texto.
-if (mail($to, $subject, $body, "Content-Type: text/html"))
+$addresseeAuxiliar = $addressee; // Para.
+$body = $message; // corpo do texto.
+if (mail($addresseeAuxiliar, $subject, $body, "Content-Type: text/html"))
     echo 'e-mail enviado com sucesso!';
 else
     echo 'e-mail nao enviado!';

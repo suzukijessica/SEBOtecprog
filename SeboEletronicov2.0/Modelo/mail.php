@@ -29,12 +29,12 @@ $message = '<html>
 
 $subject = 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico';
 // Subject
-$to = $receiver;
+$addresseeAuxiliar = $receiver;
 // Receiver
 $body = $message;
 // Body of the text message.
 
-if (mail($to, $subject, $body, "Content-Type: text/html"))
+if (mail($addresseeAuxiliar, $subject, $body, "Content-Type: text/html"))
     echo 'e-mail enviado com sucesso!';
 else
     echo 'e-mail nao enviado!';
