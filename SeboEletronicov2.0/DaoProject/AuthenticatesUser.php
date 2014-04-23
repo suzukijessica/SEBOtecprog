@@ -8,24 +8,24 @@
 include '../Utilidades/ConexaoComBanco.php';
 
 
-$user_email = $_POST['email'];
+$userEmail = $_POST['email'];
 $userPassword = $_POST['senha'];
 
-$sql_command = mysql_query("SELECT * FROM usuario WHERE email_usuario = '" . $user_email . "'") or die(mysql_error());
-$sql_command2 = mysql_query("SELECT * FROM senha WHERE codigo_senha ='" . $userPassword . "'");
-$row = mysql_num_rows($sql_command);
-$row2 = mysql_num_rows($sql_command2);
+$sqlCommand = mysql_query("SELECT * FROM usuario WHERE email_usuario = '" . $userEmail . "'") or die(mysql_error());
+$sqlCommand2 = mysql_query("SELECT * FROM senha WHERE codigo_senha ='" . $userPassword . "'");
+$row = mysql_num_rows($sqlCommand);
+$row2 = mysql_num_rows($sqlCommand2);
 
-$user_name = mysql_fetch_array($sql_command);
-$id_user = $user_name['id_usuario'];
+$userName = mysql_fetch_array($sqlCommand);
+$idUser = $userName['id_usuario'];
 
 if ($row == $row2) {
     
     if ($row > 0) {
         session_start();
-        $_SESSION['email'] = $user_email;
+        $_SESSION['email'] = $userEmail;
         $_SESSION['senha'] = $userPassword;
-        $_SESSION['id_usuario'] = $id_user;
+        $_SESSION['id_usuario'] = $idUser;
         //echo "<script>alert('Seja bem vindo ao SEBO Eletronico!')</script>";
         echo"<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php'</script>";
     } else {

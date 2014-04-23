@@ -5,8 +5,8 @@
   File description: connect with database
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
-$establishes_connection = mysql_connect("localhost", "root", "");
-    if (!$establishes_connection){
+$establishesConnection = mysql_connect("localhost", "root", "");
+    if (!$establishesConnection){
         die("<h1>Falha na Conexao </h1>");
     }else{
         //nothing to do - proceed to the next step function
