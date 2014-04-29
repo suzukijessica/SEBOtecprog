@@ -5,10 +5,10 @@
  */
 
 session_start();
-include '../Controle/LivroControlador.php';
+include '../ControllerProject/BookController.php';
 $userId = $_SESSION['id_usuario'];
 
-$listOfBooks = LivroControlador::getAllLivro();
+$listOfBooks = BookController::getAllBook();
 ?>
 
 <html>

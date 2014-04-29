@@ -6,8 +6,8 @@
 */ 
 
 require_once "../../Modelo/Livro.php";
-require_once "../../Controle/LivroControlador.php";
-require_once "../../Dao/LivroDao.php";
+require_once "../../ControllerProject/BookController.php";
+require_once "../../DaoProject/BookDao.php";
 require_once "../../Utilidades/ValidaDados.php";
 require_once "../../Utilidades/ExcessaoNomeInvalido.php";
 require_once "../../Utilidades/ExcessaoTituloInvalido.php";

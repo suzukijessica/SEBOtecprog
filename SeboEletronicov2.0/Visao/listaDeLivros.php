@@ -4,10 +4,10 @@
   File description: data view to list the books
  */
 
-include '../Controle/LivroControlador.php';
+include '../ControllerProject/BookController.php';
 $userId = $_REQUEST['livros'];
 
-$listOfBooks = LivroControlador::getLivroById($userId);
+$listOfBooks = BookController::getBookById($userId);
 ?>
 
 <html>

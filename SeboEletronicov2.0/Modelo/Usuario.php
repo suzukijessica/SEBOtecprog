@@ -11,7 +11,7 @@ include '../Utilidades/ExcessaoNomeInvalido.php';
 include '../Utilidades/ExcessaoTelefoneInvalido.php';
 include '../Utilidades/ExcessaoEmailInvalido.php';
 include '../Utilidades/ExcessaoSenhaInvalida.php';
-include '../Dao/UsuarioDao.php';
+include '../DaoProject/UserDao.php';
 
 class Usuario {
 

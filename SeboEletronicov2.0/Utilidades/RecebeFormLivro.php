@@ -5,7 +5,7 @@
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include_once '../Controle/LivroControlador.php';
+include_once '../ControllerProject/BookController.php';
 //require_once '';
 
 switch ($_POST['tipo']) {
@@ -21,10 +21,10 @@ switch ($_POST['tipo']) {
         $bookGender = $_POST['genero'];
         $bookCondition = $_POST['estado'];
         $bookDescription = $_POST['descricao'];
-        $id_book_owner = $_POST['id_dono'];
+        $idBookOwner = $_POST['id_dono'];
 
 
-        $salvo = LivroControlador::salvaLivro($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $id_book_owner);
+        $salvo = BookController::savesBook($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $idBookOwner);
 
 
         if (!empty($salvo)) {
@@ -47,10 +47,10 @@ switch ($_POST['tipo']) {
         $bookGender = $_POST['genero'];
         $bookCondition = $_POST['estado'];
         $bookDescription = $_POST['descricao'];
-        $id_book_owner = $_POST['id_dono'];
+        $idBookOwner = $_POST['id_dono'];
         $userId = $_POST['id'];
 
-        LivroControlador::alteraLivro($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $userId, $id_book_owner);
+        BookController::changesBook($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $userId, $idBookOwner);
         ?>
         <script language="Javascript" type="text/javascript">
             alert("Livro alterado com sucesso!!");
@@ -63,12 +63,12 @@ switch ($_POST['tipo']) {
 
     case "pesquisaLivro":
         $bookTitle = $_POST['titulo'];
-        $estadoNovo = $_POST['novo'];
-        $estadoUsado = $_POST['usado'];
-        $disponibilidadeVenda = $_POST['venda'];
-        $disponibilidadeTroca = $_POST['troca'];
+        $newBookState = $_POST['novo'];
+        $usedBookState = $_POST['usado'];
+        $availabilityBookSelling = $_POST['venda'];
+        $availabilityBookExchanging = $_POST['troca'];
 
-        $listOfBooks = LivroControlador::pesquisaLivro($bookTitle, $estadoNovo, $estadoUsado, $disponibilidadeVenda, $disponibilidadeTroca);
+        $listOfBooks = BookController::searchesBook($bookTitle, $newBookState, $usedBookState, $availabilityBookSelling, $availabilityBookExchanging);
         $idBook = $listOfBooks['id_livro'];
         ?>
         <script language = "Javascript">
@@ -79,7 +79,7 @@ switch ($_POST['tipo']) {
 
 if ($_REQUEST['id_livro']) {
     $idBook = $_REQUEST['id_livro'];
-    LivroControlador::deletaLivro($idBook);
+    BookController::deletesBook($idBook);
     ?>
     <script language="Javascript" type="text/javascript">
         alert("Livro excluido com sucesso!!");

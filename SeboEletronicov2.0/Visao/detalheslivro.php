@@ -94,7 +94,7 @@ $idUser = $_SESSION['id_usuario'];
             $bookPublisher = $row ['editora'] . "<br />";
             $bookAuthor = $row ['autor'] . "<br />";
             $bookDescription = $row ['descricao_livro'] . "<br />";
-            $id_book_owner = $row['id_dono'] . "<br />";
+            $idBookOwner = $row['id_dono'] . "<br />";
         }
 
 
@@ -123,7 +123,7 @@ $idUser = $_SESSION['id_usuario'];
                 <input type = "hidden" name="nome_comprador" value= "<?php echo $nameBuyer; ?>" >
                 <input type="hidden" name="tel_comprador" value= " <?php echo $phoneBuyer; ?>" >
                 <input type="hidden" name="id_livro" value=" <?php echo $idBook; ?>" >
-                <input type="hidden" name="id_dono" value=" <?php echo $id_book_owner; ?>" >
+                <input type="hidden" name="id_dono" value=" <?php echo $idBookOwner; ?>" >
                 <input type="submit" value="Comprar" />
                 <label for="pergunta"></label>
             </form>

@@ -6,8 +6,8 @@
 */ 
 
 require_once "../../Modelo/Usuario.php";
-require_once "../../Controle/UsuarioControlador.php";
-require_once "../../Dao/UsuarioDao.php";
+require_once "../../ControllerProject/UserController.php";
+require_once "../../DaoProject/UserDao.php";
 require_once "../../Utilidades/ValidaDados.php";
 require_once "../../Utilidades/ExcessaoNomeInvalido.php";
 require_once "../../Utilidades/ExcessaoSenhaInvalida.php";

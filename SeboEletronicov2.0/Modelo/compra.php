@@ -5,7 +5,7 @@
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include "../Dao/conexao_bd.inc";
+include "../DaoProject/ConnectionDatabase.inc";
 if (!$dataBase)
     die("<h1>Falha no bd </h1>");
 

@@ -14,7 +14,7 @@ class UserController {
         try {
             $user = new Usuario($userName, $userEmail, $userPhone, $userPassword);
         } catch (Exception $exceptionControlUser) {
-            print"<script>alert('" . $exceptionControlUserser->getMessage() . "')</script>";
+            print"<script>alert('" . $exceptionControlUser->getMessage() . "')</script>";
             echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarUsuario.php'; </script>";
             exit;
         }

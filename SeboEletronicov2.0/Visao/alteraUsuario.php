@@ -7,9 +7,10 @@
 session_start();
 $idUser = $_SESSION['id_usuario'];
 $finalPassword = $_SESSION['senha'];
-include '../Controle/UsuarioControlador.php';
 
-$register = UsuarioControlador::checaCadastroId($idUser);
+include '../ControllerProject/UserController.php';
+
+$register = UserController::checksCadastreById($idUser);
 ?>
 <!DOCTYPE HTML>
 <html>

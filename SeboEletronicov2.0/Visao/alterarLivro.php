@@ -7,9 +7,9 @@
 session_start();
 $idUser = $_SESSION['id_usuario'];
 
-include '../Controle/LivroControlador.php';
+include '../ControlllerProject/BookController.php';
 $userId = $_REQUEST['id'];
-$listOfBooks = LivroControlador::getLivroById($userId);
+$listOfBooks = BookController::getBookById($userId);
 ?>
 
 <html>

@@ -7,7 +7,7 @@
 
 include '../Modelo/Livro.php';
 
-class UserController {
+class BookController {
 
     public function savesBook($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
             $bookExchanging, $bookState, $bookDescription, $idBookOwner) {
@@ -39,7 +39,7 @@ class UserController {
     }
 
     public function getBookById($idBook) {
-        return BookDao::getLivroByIdDao($idBook);
+        return BookDao::getBookByIdDao($idBook);
     }
 
     public function deletesBook($idBook) {
@@ -59,7 +59,7 @@ class UserController {
         }
 
         try {
-            $livro = new Livro($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
+            $book = new Livro($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
             $bookExchanging, $bookState, $bookDescription);
             
         } catch (Exception $exception_control_book) {

@@ -6,9 +6,10 @@
 
 session_start();
 $idUser = $_SESSION['id_usuario'];
-include '../Controle/UsuarioControlador.php';
-$username = $_REQUEST['nome'];
-$searchUser = UsuarioControlador::pesquisaUsuario($username);
+
+include '../ControllerProject/UserController.php';
+$userName = $_REQUEST['nome'];
+$searchUser = UserController::searchesUser($userName);
 ?>
 
 <!DOCTYPE HTML>

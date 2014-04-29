@@ -6,7 +6,7 @@
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include '../Dao/LivroDao.php';
+include '../DaoProject/BookDao.php';
 include '../Utilidades/ValidaDados.php';
 include '../Utilidades/ExcessaoNomeInvalido.php';
 include '../Utilidades/ExcessaoTituloInvalido.php';

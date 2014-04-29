@@ -6,9 +6,9 @@
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha
  */
 $server = "localhost";
-$username = "root";
+$userName = "root";
 $userPassword = "";
-$database_conexion = mysql_connect($server, $username, $userPassword);
+$database_conexion = mysql_connect($server, $userName, $userPassword);
 
 if (!$database_conexion) {
     die("Não foi possível conectar: " . mysql_error());
