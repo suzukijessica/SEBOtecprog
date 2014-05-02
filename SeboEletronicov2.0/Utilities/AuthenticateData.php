@@ -43,12 +43,12 @@ class AuthenticateData {
         }
     }
 
-    public function validaTelefone($telphone) {
+    public function validaTelefone($telephone) {
         //Check telephone provided by user
 
-        if (!filter_var($telphone, FILTER_VALIDATE_INT)) {
+        if (!filter_var($telephone, FILTER_VALIDATE_INT)) {
             return 1;
-        } elseif (strlen($telphone) != 8) {
+        } elseif (strlen($telephone) != 8) {
             return 2;
         }
     }

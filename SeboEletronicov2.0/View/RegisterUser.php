@@ -56,7 +56,7 @@ $idUser = $_SESSION['id_usuario'];
 
                 <tr> 
                     <td>
-                        <h6> Telefone: <input type="text" name="telefone"/></h6> 
+                        <h6> Telefone: <input type="text" name="telephone"/></h6> 
                     </td>
                 </tr>
 

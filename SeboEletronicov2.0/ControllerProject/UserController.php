@@ -12,7 +12,7 @@ class UserController {
         //saves user control actions in the database
 
         try {
-            $user = new Usuario($userName, $userEmail, $userPhone, $userPassword);
+            $user = new UserModel($userName, $userEmail, $userPhone, $userPassword);
         } catch (Exception $exceptionControlUser) {
             print"<script>alert('" . $exceptionControlUser->getMessage() . "')</script>";
             echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/RegisterUser.php'; </script>";
@@ -31,7 +31,7 @@ class UserController {
 
         try {
 
-            $user = new Usuario($userName, $userEmail, $userPhone, $userPassword);
+            $user = new UserModel($userName, $userEmail, $userPhone, $userPassword);
         } catch (Exception $exceptionControlUserChangeUser) {
             print"<script>alert('" . $exceptionControlUserChangeUser->getMessage() . "')</script>";
             echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/ChangeUser.php'; </script>";
