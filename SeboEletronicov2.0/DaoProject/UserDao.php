@@ -6,7 +6,7 @@
   Authors: Caique Pereira
  */
 
-include "../Utilidades/ConexaoComBanco.php";
+include "../Utilities/ConexaoComBanco.php";
 
 class UserDao {
 

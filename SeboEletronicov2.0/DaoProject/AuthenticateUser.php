@@ -5,7 +5,7 @@
   File description: check email and password of user
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
-include '../Utilidades/ConexaoComBanco.php';
+include '../Utilities/ConexaoComBanco.php';
 
 
 $userEmail = $_POST['email'];

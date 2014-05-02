@@ -6,7 +6,7 @@
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include "../Utilidades/ConexaoComBanco.php";
+include "../Utilities/ConexaoComBanco.php";
 
 class BookDao {
 
