@@ -3,10 +3,9 @@
 /*
   File name: UsuarioDao.php
   File description: establishes mechanisms for data access to the database.
-  Authors: Caique Pereira
  */
 
-include "../Utilities/ConexaoComBanco.php";
+include "../Utilities/ConnectionDatabase.php";
 
 class UserDao {
 

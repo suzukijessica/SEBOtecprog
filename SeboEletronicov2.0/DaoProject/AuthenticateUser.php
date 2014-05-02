@@ -3,9 +3,8 @@
 /*
   File name: autenticacaoUsuario.php
   File description: check email and password of user
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
-include '../Utilities/ConexaoComBanco.php';
+include '../Utilities/ConnectionDatabase.php';
 
 
 $userEmail = $_POST['email'];
@@ -26,8 +25,7 @@ if ($row == $row2) {
         $_SESSION['email'] = $userEmail;
         $_SESSION['senha'] = $userPassword;
         $_SESSION['id_usuario'] = $idUser;
-        //echo "<script>alert('Seja bem vindo ao SEBO Eletronico!')</script>";
-        echo"<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php'</script>";
+        echo"<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/IndexLogin.php'</script>";
     } else {
         //nothing to do - proceed to the next step function
         
@@ -35,7 +33,7 @@ if ($row == $row2) {
     
 } else {
     echo "<script>alert('Email de usuario ou senha invalido, tente novamente!')</script>";
-    echo "<script>  window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/entrarLogin.php'</script>";
+    echo "<script>  window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/Login.php'</script>";
     
 }
 ?>

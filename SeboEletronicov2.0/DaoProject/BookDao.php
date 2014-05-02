@@ -2,11 +2,10 @@
 
 /*
   File name: LivroDao.php
-  File description: insert, select, update, delete Livros.
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
+  File description: insert, select, update, delete Livros
  */
 
-include "../Utilities/ConexaoComBanco.php";
+include "../Utilities/ConnectionDataBase.php";
 
 class BookDao {
 
