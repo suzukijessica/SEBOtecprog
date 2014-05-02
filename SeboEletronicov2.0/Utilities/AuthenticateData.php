@@ -3,10 +3,9 @@
 /*
   File name: ValidaDados.php
   File description: check informations
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-class ValidaDados {
+class AuthenticateData {
 
     public function validaCamposNulos($field) {
         return !(empty($field));

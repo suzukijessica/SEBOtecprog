@@ -1,65 +1,64 @@
 /*
  File name: Redireciona.js
  File description: redirects windows
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
 function livrosDisponiveis() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/livrosDisponiveis.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/livrosDisponiveis.php";
 }
 
 function meusLivros() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/meusLivros.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/meusLivros.php";
 }
 
 function home() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLogin.php";
 }
 
 function user() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexUsuario.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexUsuario.php";
 }
 
 function cadastra() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarUsuario.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/cadastrarUsuario.php";
 }
 
 function altera() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/alteraUsuario.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/alteraUsuario.php";
 }
 
 function deleta() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/excluiUsuario.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/excluiUsuario.php";
 }
 
 function pesquisa() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/pesquisarUsuario.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/pesquisarUsuario.php";
 }
 
 function cadastraLivro() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarLivro.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/cadastrarLivro.php";
 }
 
 function pesquisaLivro() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/pesquisarLivro.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/pesquisarLivro.php";
 }
 
 function deletaLivro() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/excluirLivro.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/excluirLivro.php";
 }
 
 function livro() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLivro.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLivro.php";
 }
 function login() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/entrarLogin.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/entrarLogin.php";
 }
 function sair() {
-    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/site.php";
+    window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/site.php";
 }
 function loginsuccessfully(id) {
-    window.location = 'http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLogin.php?idUser=id';
+    window.location = 'http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLogin.php?idUser=id';
 }
 function loginfailed() {
-    setTimeout("window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/entrarLogin.php'", 0);
+    setTimeout("window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/entrarLogin.php'", 0);
 }

@@ -5,7 +5,7 @@
   File description: establishes exception when an invalid editor is inserted.
  */
 
-class ExcessaoEditoraInvalida extends Exception {
+class ExceptionPublishingWrong extends Exception {
 
     function __construct($message) {
         parent::__construct($message);

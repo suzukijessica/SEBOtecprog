@@ -2,7 +2,6 @@
 /*
   File name: RecebeFormLivro.php
   File description: gets selected form to register, change, search or delete book
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
 include_once '../ControllerProject/BookController.php';
@@ -33,7 +32,7 @@ switch ($_POST['tipo']) {
             echo "<script>('Falha ao cadastrar o livro, tente novamente.')</script>";
         }
 
-        echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLivro.php';</script>";
+        echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLivro.php';</script>";
 
         break;
 
@@ -57,7 +56,7 @@ switch ($_POST['tipo']) {
         </script>  
 
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLivro.php";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLivro.php";
         </script><?php
         break;
 
@@ -72,7 +71,7 @@ switch ($_POST['tipo']) {
         $idBook = $listOfBooks['id_livro'];
         ?>
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/listaDeLivros.php?livros=<?php echo $idBook ?>";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/listaDeLivros.php?livros=<?php echo $idBook ?>";
         </script><?php
         break;
 }
@@ -86,7 +85,7 @@ if ($_REQUEST['id_livro']) {
     </script>
 
     <script language = "Javascript">
-        window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/indexLivro.php";
+        window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLivro.php";
     </script><?php
 }
 ?>
