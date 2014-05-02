@@ -56,7 +56,7 @@ switch ($_POST['tipo']) {
         </script>  
 
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLivro.php";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/IndexBook.php";
         </script><?php
         break;
 
@@ -71,7 +71,7 @@ switch ($_POST['tipo']) {
         $idBook = $listOfBooks['id_livro'];
         ?>
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/listaDeLivros.php?livros=<?php echo $idBook ?>";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/ListOfBooks.php?livros=<?php echo $idBook ?>";
         </script><?php
         break;
 }
@@ -85,7 +85,7 @@ if ($_REQUEST['id_livro']) {
     </script>
 
     <script language = "Javascript">
-        window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLivro.php";
+        window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/IndexBook.php";
     </script><?php
 }
 ?>

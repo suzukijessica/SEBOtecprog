@@ -22,7 +22,7 @@ switch ($_POST['tipo']) {
         </script>      
 
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/entrarLogin.php";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/Login.php";
         </script>
         <?php
         break;
@@ -43,7 +43,7 @@ switch ($_POST['tipo']) {
         </script>      
 
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/indexLogin.php";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/Login.php";
         </script>
 
         <?php
@@ -58,14 +58,14 @@ switch ($_POST['tipo']) {
         </script>   
 
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/site.php";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/Site.php";
         </script>
         <?php
         break;
     case "pesquisar": $userName = $_POST['nome'];
         ?>
         <script language = "Javascript">
-            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/usuarioPesquisado.php?nome=<?php echo $userName ?>";
+            window.location = "http://localhost/SEBOtecprog/SeboEletronicov2.0/View/SearchedUser.php?nome=<?php echo $userName ?>";
         </script><?php
         break;
 }

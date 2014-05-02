@@ -5,9 +5,9 @@
   File description: email
  */
 
-include 'User.php';
+include 'UserModel.php';
 
-$address = User::getEmail();
+$address = UserModel::getEmail();
 $message = '<html>
 				<body>
 					<table background = "http://i.imgur.com/GX69Php.jpg" height = "800" width=" 650" padding-top = "300" padding-right= "100" padding-bottom ="300" padding-left= "100">
