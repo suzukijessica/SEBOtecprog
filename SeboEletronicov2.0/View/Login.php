@@ -7,16 +7,16 @@
 <html>
     <head>	
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/css/UsuarioStyle.css" type="text/css" media="all">
-        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/css/main.css" type="text/css" media="all">
-        <link rel="shortcut icon" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/android.ico">
-        <script src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilidades/Redireciona.js"></script> 
+        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/css/UsuarioStyle.css" type="text/css" media="all">
+        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/css/main.css" type="text/css" media="all">
+        <link rel="shortcut icon" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/android.ico">
+        <script src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilities/Redirect.js"></script> 
         <title>Sebo Eletrônico</title>
 
     </head>
     <body>
         <div id="header">
-            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/sebo_header.png" class="imgHeader"/></div>
+            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/sebo_header.png" class="imgHeader"/></div>
         </div>
 
         <div id="mainmenu">
@@ -29,7 +29,7 @@
         <br/>
         <br/>
 
-        <form name="loginform" method="post" action="http://localhost/SEBOtecprog/SeboEletronicov2.0/Dao/autenticacaoUsuario.php">
+        <form name="loginform" method="post" action="http://localhost/SEBOtecprog/SeboEletronicov2.0/DaoProject/AuthenticateUser.php">
             <table class='insr'>
 
                 <tr>
@@ -48,7 +48,7 @@
                 </tr>
                 <th>
                     <input type="submit" value="Entrar" /><br><br>
-                    <a href="cadastrarUsuario.php">Cadastre-se</a>
+                    <a href="RegisterUser.php">Cadastre-se</a>
                 </th>
             </table>
         </form>

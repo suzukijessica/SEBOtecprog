@@ -25,7 +25,7 @@ $register = UserController::checksCadastreById($idUser);
     </head>
     <body>
         <div id="header">
-            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/sebo_header.png" class="imgHeader"/></div>
+            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/sebo_header.png" class="imgHeader"/></div>
         </div>
 
         <div id="mainmenu">
@@ -50,7 +50,7 @@ $register = UserController::checksCadastreById($idUser);
     <br/>
 
 
-    <form  name="Insere Dados" action="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilidades/RecebeForm.php" method="post" class="formu">
+    <form  name="Insere Dados" action="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilities/ReceiveForm.php" method="post" class="formu">
 
         <table class='insr'>
 

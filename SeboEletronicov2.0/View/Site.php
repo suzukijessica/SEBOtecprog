@@ -12,17 +12,17 @@ $idUser = $_SESSION['id_usuario'];
 <html>
     <head>	
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/css/UsuarioStyle.css" type="text/css" media="all">
-        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/css/main.css" type="text/css" media="all">
-        <link rel="shortcut icon" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/android.ico">
-        <script src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilidades/Redireciona.js"></script> 
+        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/css/UsuarioStyle.css" type="text/css" media="all">
+        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/css/main.css" type="text/css" media="all">
+        <link rel="shortcut icon" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/android.ico">
+        <script src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilities/Redirect.js"></script> 
 
         <title>Sebo Eletrônico</title>
 
     </head>
     <body>
         <div id="header">
-            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/sebo_header.png" class="imgHeader"/></div>
+            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/sebo_header.png" class="imgHeader"/></div>
         </div>
 
         <div id="mainmenu">
@@ -31,7 +31,7 @@ $idUser = $_SESSION['id_usuario'];
 
         </div>
 
-        <img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/LogoSebo.jpg" class="img"/>
+        <img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/LogoSebo.jpg" class="img"/>
 
     </body>
 

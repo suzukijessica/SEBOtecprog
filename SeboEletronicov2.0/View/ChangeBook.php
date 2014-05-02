@@ -24,7 +24,7 @@ $listOfBooks = BookController::getBookById($userId);
     </head>
     <body>
         <div id="header">
-            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/sebo_header.png" class="imgHeader"/></div>
+            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/sebo_header.png" class="imgHeader"/></div>
         </div>
 
         <div id="mainmenu">
@@ -48,7 +48,7 @@ $listOfBooks = BookController::getBookById($userId);
         <br/>
 
 
-        <form name="Insere Dados" action="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilidades/RecebeFormLivro.php" method="post" class="Formulario">
+        <form name="Insere Dados" action="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilities/ReceiveBookForm.php" method="post" class="Formulario">
             <table class='insr'>
 
                 <tr>

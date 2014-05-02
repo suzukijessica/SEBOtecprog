@@ -13,16 +13,16 @@ $listOfBooks = BookController::getBookById($userId);
 <html>
     <head>	
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/css/UsuarioStyle.css" type="text/css" media="all">
-        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/css/main.css" type="text/css" media="all">
-        <link rel="shortcut icon" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/android.ico">
-        <script src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilidades/Redireciona.js"></script> 
+        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/css/UsuarioStyle.css" type="text/css" media="all">
+        <link rel="stylesheet" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/css/main.css" type="text/css" media="all">
+        <link rel="shortcut icon" href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/android.ico">
+        <script src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Utilities/Redirect.js"></script> 
         <title>Sebo Eletrônico</title>
 
     </head>
     <body>
         <div id="header">
-            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/img/sebo_header.png" class="imgHeader"/></div>
+            <div id="logo"><img src="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/img/sebo_header.png" class="imgHeader"/></div>
         </div>
 
         <div id="mainmenu">
@@ -128,7 +128,7 @@ $listOfBooks = BookController::getBookById($userId);
 
     <tr>              
         <td>
-            <a href="http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/alterarLivro.php?id=<?php echo $userId ?> " title="Alterar Livro"> <img src="img/icone_lapis.png" align="left"> </a>
+            <a href="http://localhost/SEBOtecprog/SeboEletronicov2.0/View/ChangeBook.php?id=<?php echo $userId ?> " title="Alterar Livro"> <img src="img/icone_lapis.png" align="left"> </a>
             <a href=" " title="Excluir Livro"> <img src="img/icone_lixeira.png" align="right" > </a>
         </td>    
     </tr>

@@ -37,7 +37,7 @@ $idUser = $_SESSION['id_usuario'];
 
 
         <?php
-        include "..\Utilidades\ConexaoComBanco.php";
+        include "..\Utilities\ConnectionDatabase.php";
         if (!$dataBase)
             die("<h1>Falha no bd </h1>");
 
@@ -62,7 +62,7 @@ $idUser = $_SESSION['id_usuario'];
 
 
 
-        include '../Model/User.php';
+        include '../Model/UserModel.php';
 
         include "..\Utilities\ConnectionDatabase.php";
         if (!$dataBase)
