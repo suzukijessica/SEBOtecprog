@@ -6,5 +6,5 @@
  */
 session_start();
 session_destroy();
-header("Location: ../View/site.php");
+header("Location: ../View/Site.php");
 ?>

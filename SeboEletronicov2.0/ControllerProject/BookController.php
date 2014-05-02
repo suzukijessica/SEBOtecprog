@@ -5,7 +5,7 @@
   File description: insert, select, update, delete Livros calling methods of class LivroDao.
  */
 
-include '../Model/Livro.php';
+include '../Model/BookModel.php';
 
 class BookController {
 
@@ -26,7 +26,7 @@ class BookController {
             $bookExchanging, $bookState, $bookDescription);
         } catch (Exception $exception_control_book) {
             print"<script>alert('" . $exception_control_book->getMessage() . "')</script>";
-            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarLivro.php';</script>";
+            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/RegisterBook.php';</script>";
             exit;
             
         }
@@ -64,7 +64,7 @@ class BookController {
             
         } catch (Exception $exception_control_book) {
             print"<script>alert('" . $exception_control_book->getMessage() . "')</script>";
-            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarLivro.php';</script>";
+            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/RegisterBook.php';</script>";
             exit;
         }
         return BookDao::changesBookDao($book, $idBookOwner, $idUser);

@@ -4,7 +4,7 @@
   File description: controls actions of save, check, change, delete and search the users
  */
 
-include '../Model/Usuario.php';
+include '../Model/UserModel.php';
 
 class UserController {
 
@@ -15,7 +15,7 @@ class UserController {
             $user = new Usuario($userName, $userEmail, $userPhone, $userPassword);
         } catch (Exception $exceptionControlUser) {
             print"<script>alert('" . $exceptionControlUser->getMessage() . "')</script>";
-            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/cadastrarUsuario.php'; </script>";
+            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/RegisterUser.php'; </script>";
             exit;
         }
         return UserDao::savesUserDao($user);
@@ -34,7 +34,7 @@ class UserController {
             $user = new Usuario($userName, $userEmail, $userPhone, $userPassword);
         } catch (Exception $exceptionControlUserChangeUser) {
             print"<script>alert('" . $exceptionControlUserChangeUser->getMessage() . "')</script>";
-            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/Visao/alteraUsuario.php'; </script>";
+            echo "<script>window.location='http://localhost/SEBOtecprog/SeboEletronicov2.0/View/ChangeUser.php'; </script>";
             exit;
         }
         return UserDao::changesUserDao($user, $idUser, $oldUserPassword);
