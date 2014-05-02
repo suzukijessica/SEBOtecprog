@@ -3,7 +3,6 @@
 /*
   File name: conexao_bd.php
   File description: connect with database
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 $establishesConnection = mysql_connect("localhost", "root", "");
     if (!$establishesConnection){
