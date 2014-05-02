@@ -5,7 +5,7 @@
   File description: insert, select, update, delete Livros calling methods of class LivroDao.
  */
 
-include '../Modelo/Livro.php';
+include '../Model/Livro.php';
 
 class BookController {
 

@@ -6,5 +6,5 @@
  */
 session_start();
 session_destroy();
-header("Location: ../Visao/site.php");
+header("Location: ../View/site.php");
 ?>

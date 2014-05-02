@@ -4,7 +4,7 @@
   File description: controls actions of save, check, change, delete and search the users
  */
 
-include '../Modelo/Usuario.php';
+include '../Model/Usuario.php';
 
 class UserController {
 
