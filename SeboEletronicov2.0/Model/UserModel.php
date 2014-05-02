@@ -3,17 +3,16 @@
 /*
   File name: Usuario.php
   File description: model of user
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include '../Utilities/ValidaDados.php';
-include '../Utilities/ExcessaoNomeInvalido.php';
-include '../Utilities/ExcessaoTelefoneInvalido.php';
-include '../Utilities/ExcessaoEmailInvalido.php';
-include '../Utilities/ExcessaoSenhaInvalida.php';
+include '../Utilities/AuthenticateData.php';
+include '../Utilities/ExceptionNameWrong.php';
+include '../Utilities/ExceptionPhoneWrong.php';
+include '../Utilities/ExceptionEmailWrong.php';
+include '../Utilities/ExceptionPasswordWrong.php';
 include '../DaoProject/UserDao.php';
 
-class Usuario {
+class UserModel {
 
     private $name;
     private $telephone;
@@ -36,11 +35,11 @@ class Usuario {
     public function setNome($name) {
         //Method to modify the instance of the name attribute 
 
-        if (!ValidaDados::validaCamposNulos($name)) {
+        if (!AuthenticateData::validaCamposNulos($name)) {
             throw new ExcessaoNomeInvalido("Nome nao pode ser nulo!");
-        } elseif (ValidaDados::validaNome($name) == 1) {
+        } elseif (AuthenticateData::validaNome($name) == 1) {
             throw new ExcessaoNomeInvalido("Nome contem caracteres invalidos!");
-        } elseif (ValidaDados::validaNome($name) == 2) {
+        } elseif (AuthenticateData::validaNome($name) == 2) {
             throw new ExcessaoNomeInvalido("Nome contem espaços seguidos!");
         } else {
             $this->nome = $name;
@@ -55,11 +54,11 @@ class Usuario {
     public function setTelefone($telephone) {
         //Method to modify the instance of the telephone attribute 
 
-        if (!ValidaDados::validaCamposNulos($telephone)) {
+        if (!AuthenticateData::validaCamposNulos($telephone)) {
             throw new ExcessaoTelefoneInvalido("Telefone nao pode ser nulo!");
-        } elseif (ValidaDados::validaTelefone($telefone) == 1) {
+        } elseif (AuthenticateData::validaTelefone($telefone) == 1) {
             throw new ExcessaoTelefoneInvalido("Telefone nao pode conter caracteres alfabeticos!");
-        } elseif (ValidaDados::validaTelefone($telephone) == 2) {
+        } elseif (AuthenticateData::validaTelefone($telephone) == 2) {
             throw new ExcessaoTelefoneInvalido("Telefone deve conter exatamente oito (8) digitos!");
         } else {
             $this->telefone = $telephone;
@@ -74,9 +73,9 @@ class Usuario {
     public function setEmail($email) {
         //Method to modify the instance of the email attribute 
 
-        if (!ValidaDados::validaCamposNulos($email)) {
+        if (!AuthenticateData::validaCamposNulos($email)) {
             throw new ExcessaoEmailInvalido("E-mail nao pode ser nulo!");
-        } elseif (ValidaDados::validaEmail($email) == 1) {
+        } elseif (AuthenticateData::validaEmail($email) == 1) {
             throw new ExcessaoEmailInvalido("E-mail nao válido!");
         } else {
             $this->email = $email;
@@ -91,9 +90,9 @@ class Usuario {
     public function setSenha($password) {
         //Method to modify the instance of the password attribute   
 
-        $auxiliar = ValidaDados::validaSenha($password);
+        $auxiliar = AuthenticateData::validaSenha($password);
 
-        if (!ValidaDados::validaSenhaNula($password)) {
+        if (!AuthenticateData::validaSenhaNula($password)) {
             throw new ExcessaoSenhaInvalida("Senha nao pode ser nula!");
         } elseif ($auxiliar == 1) {
             throw new ExcessaoSenhaInvalida("Senha contem caracteres invalidos!");

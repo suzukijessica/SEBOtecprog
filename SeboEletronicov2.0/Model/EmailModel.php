@@ -3,12 +3,11 @@
 /*
   File name: mail.php
   File description: model of email
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include 'Usuario.php';
+include 'UserModel.php';
 
-$receiver = Usuario::getEmail();
+$receiver = UserModel::getEmail();
 $message = '<html>
 				<body>
 					<table background = "http://i.imgur.com/GX69Php.jpg" height = "800" width=" 650" padding-top = "300" padding-right= "100" padding-bottom ="300" padding-left= "100">
@@ -29,12 +28,12 @@ $message = '<html>
 
 $subject = 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico';
 // Subject
-$addresseeAuxiliar = $receiver;
+$addressAuxiliar = $receiver;
 // Receiver
 $body = $message;
 // Body of the text message.
 
-if (mail($addresseeAuxiliar, $subject, $body, "Content-Type: text/html"))
+if (mail($addressAuxiliar, $subject, $body, "Content-Type: text/html"))
     echo 'e-mail enviado com sucesso!';
 else
     echo 'e-mail nao enviado!';

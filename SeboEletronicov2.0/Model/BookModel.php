@@ -3,16 +3,15 @@
 /*
   File name: Livro.php
   File description: model of book.
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
 include '../DaoProject/BookDao.php';
-include '../Utilities/ValidaDados.php';
-include '../Utilities/ExcessaoNomeInvalido.php';
-include '../Utilities/ExcessaoTituloInvalido.php';
-include '../Utilities/ExcessaoEditoraInvalida.php';
+include '../Utilities/AuthenticateData.php';
+include '../Utilities/ExceptionNameWrong.php';
+include '../Utilities/ExceptionTileWrong.php';
+include '../Utilities/ExceptionPublishingWrong.php';
 
-class Livro {
+class BookModel {
 
     private $title;
     private $author;
@@ -44,7 +43,7 @@ class Livro {
 
     public function setTitulo($title) {
         //Method to modify the instance of the title attribute
-        if (!ValidaDados::validaCamposnulos($title)) {
+        if (!AuthenticateData::validaCamposnulos($title)) {
             throw new ExcessaoTituloInvalido("Titulo nao pode ser nulo!");
         } else {
             $this->titulo = $title;
@@ -58,11 +57,11 @@ class Livro {
 
     public function setAutor($author) {
         //Method to modify the instance of the author attribute
-        if (!ValidaDados::validaCamposNulos($author)) {
+        if (!AuthenticateData::validaCamposNulos($author)) {
             throw new ExcessaoNomeInvalido("O nome do Autor nao pode ser nulo!");
-        } elseif (ValidaDados::validaNome($author) == 1) {
+        } elseif (AuthenticateData::validaNome($author) == 1) {
             throw new ExcessaoNomeInvalido("Nome do Autor contem caracteres invalidos!");
-        } elseif (ValidaDados::validaNome($author) == 2) {
+        } elseif (AuthenticateData::validaNome($author) == 2) {
             throw new ExcessaoNomeInvalido("Nome do Autor contem espaços seguidos!");
         } else {
             $this->autor = $author;
@@ -139,7 +138,7 @@ class Livro {
     public function setEditora($publisher) {
         //Method to modify the instance of the publishing house attribute
 
-        if (!ValidaDados::validaCamposNulos($publisher)) {
+        if (!AuthenticateData::validaCamposNulos($publisher)) {
             throw new ExcessaoEditoraInvalida("A Editora do Livro nao pode ser nula!");
         } else {
             $this->editora = $publisher;

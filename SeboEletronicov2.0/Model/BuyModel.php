@@ -2,7 +2,6 @@
 /*
   File name: compra.php
   File description: model of bye
-  Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
 include "../DaoProject/ConnectionDatabase.inc";
