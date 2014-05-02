@@ -7,10 +7,10 @@
  */
 
 include '../DaoProject/BookDao.php';
-include '../Utilidades/ValidaDados.php';
-include '../Utilidades/ExcessaoNomeInvalido.php';
-include '../Utilidades/ExcessaoTituloInvalido.php';
-include '../Utilidades/ExcessaoEditoraInvalida.php';
+include '../Utilities/ValidaDados.php';
+include '../Utilities/ExcessaoNomeInvalido.php';
+include '../Utilities/ExcessaoTituloInvalido.php';
+include '../Utilities/ExcessaoEditoraInvalida.php';
 
 class Livro {
 

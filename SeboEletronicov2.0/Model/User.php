@@ -6,11 +6,11 @@
   Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
  */
 
-include '../Utilidades/ValidaDados.php';
-include '../Utilidades/ExcessaoNomeInvalido.php';
-include '../Utilidades/ExcessaoTelefoneInvalido.php';
-include '../Utilidades/ExcessaoEmailInvalido.php';
-include '../Utilidades/ExcessaoSenhaInvalida.php';
+include '../Utilities/ValidaDados.php';
+include '../Utilities/ExcessaoNomeInvalido.php';
+include '../Utilities/ExcessaoTelefoneInvalido.php';
+include '../Utilities/ExcessaoEmailInvalido.php';
+include '../Utilities/ExcessaoSenhaInvalida.php';
 include '../DaoProject/UserDao.php';
 
 class Usuario {
