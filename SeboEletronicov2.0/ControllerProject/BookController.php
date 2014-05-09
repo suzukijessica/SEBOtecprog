@@ -22,7 +22,7 @@ class BookController {
         }
 
         try {
-            $book = new Livro($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
+            $book = new BookModel($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
             $bookExchanging, $bookState, $bookDescription);
         } catch (Exception $exception_control_book) {
             print"<script>alert('" . $exception_control_book->getMessage() . "')</script>";
