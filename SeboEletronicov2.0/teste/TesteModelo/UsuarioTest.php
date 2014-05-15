@@ -2,7 +2,6 @@
 /*
  File name: UsuarioTest.php
  File description: testing function of class Usuario.php
- Authors: Caique Pereira, Jessica Suzuki, João Gabriel, Macário Soares, Victor Cunha.
 */ 
 
 require_once "../../Modelo/Usuario.php";

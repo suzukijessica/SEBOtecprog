@@ -1,5 +1,10 @@
 <?php
 
+/*
+ File name: LivroTest.php
+ File description: testing function of class Livro.php
+*/ 
+
 require_once "../../Modelo/Livro.php";
 require_once "../../Utilidades/ValidaDados.php";
 require_once "../../Utilidades/ExcessaoEditoraInvalida.php";
