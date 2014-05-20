@@ -1,11 +1,11 @@
 <?php
 
 /*
-  File name: Livro.php
+  File name: BookModel.php
   File description: model of book.
  */
 
-include '../DaoProject/BookDao.php';
+include '../Dao/BookDao.php';
 include '../Utilities/AuthenticateData.php';
 include '../Utilities/ExceptionNameWrong.php';
 include '../Utilities/ExceptionTileWrong.php';

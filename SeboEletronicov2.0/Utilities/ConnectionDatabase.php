@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: ConexaoComBanco.php
+  File name: ConnectionDatabase.php
   File description: establishes conection to the database.
  */
 

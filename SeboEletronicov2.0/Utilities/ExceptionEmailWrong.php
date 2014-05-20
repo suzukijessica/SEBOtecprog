@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: ExcessaoEmailInvalido.php
+  File name: ExceptionEmailWrong.php
   File description: establishes exception when an invalid e-mail is inserted.
  */
 

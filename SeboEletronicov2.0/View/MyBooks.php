@@ -1,14 +1,16 @@
 <?php
+
 /*
-  File name: meusLivros.php
+  File name: MyBooks.php
   File description: data view to list the books of any user
  */
 
 session_start();
-include '../ControllerProject/BookController.php';
+include '../Controller/BookController.php';
 $userId = $_SESSION['id_usuario'];
 
 $listOfBooks = BookController::getBookByIdUser($userId);
+
 ?>
 
 <html>

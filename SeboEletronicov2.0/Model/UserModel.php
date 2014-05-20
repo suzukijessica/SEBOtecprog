@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: Usuario.php
+  File name: UserModel.php
   File description: model of user
  */
 
@@ -10,7 +10,7 @@ include '../Utilities/ExceptionNameWrong.php';
 include '../Utilities/ExceptionPhoneWrong.php';
 include '../Utilities/ExceptionEmailWrong.php';
 include '../Utilities/ExceptionPasswordWrong.php';
-include '../DaoProject/UserDao.php';
+include '../Dao/UserDao.php';
 
 class UserModel {
 

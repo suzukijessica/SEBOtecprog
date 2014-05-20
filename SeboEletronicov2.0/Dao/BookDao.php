@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: LivroDao.php
+  File name: BookDao.php
   File description: insert, select, update, delete Livros
  */
 

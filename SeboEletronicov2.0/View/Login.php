@@ -1,9 +1,12 @@
 <?php
+
 /*
-  File name: entrarLogin.php
+  File name: Login.php
   File description: to enter with login
  */
+
 ?>
+
 <html>
     <head>	
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

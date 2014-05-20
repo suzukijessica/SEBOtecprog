@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: mail.php
+  File name: Email.php
   File description: email
  */
 
@@ -29,8 +29,10 @@ $message = '<html>
 $subject = 'Existe uma pessoa interessada no seu Livro - Sebo Eletronico'; // Assunto.
 $addressAuxiliar = $address; // Para.
 $body = $message; // corpo do texto.
+
 if (mail($addressAuxiliar, $subject, $body, "Content-Type: text/html"))
     echo 'e-mail enviado com sucesso!';
 else
     echo 'e-mail nao enviado!';
+
 ?>

@@ -1,6 +1,7 @@
 <?php
+
 /*
-  File name: compralivro.php
+  File name: BuyBook.php
   File description: data view to buy the book
  */
 

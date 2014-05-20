@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: ExcessaoEmailInvalido.php
+  File name: ExceptionPasswordWrong.php
   File description: establishes exception when an invalid password is inserted.
  */
 

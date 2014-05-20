@@ -1,12 +1,16 @@
 <?php
+
 /*
-  File name: indexLivro.php
+  File name: indexLogin.php
   File description: page initial of login
  */
+
 session_start();
+
 if (!isset($_SESSION["email"]) || !isset($_SESSION["senha"])) {
     header("Location: entrarLogin.php");
     exit;
+    
 } else {
     ?>
     <html>

@@ -1,10 +1,11 @@
 <?php
+
 /*
-  File name: listaDeLivros.php
+  File name: ListOfBooks.php
   File description: data view to list the books
  */
 
-include '../ControllerProject/BookController.php';
+include '../Controller/BookController.php';
 $userId = $_REQUEST['livros'];
 
 $listOfBooks = BookController::getBookById($userId);

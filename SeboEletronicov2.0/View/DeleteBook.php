@@ -1,6 +1,7 @@
 <?php
+
 /*
-  File name: excluirLivro.php
+  File name: DeleteBook.php
   File description: data view to delete the book.
  */
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: ValidaDados.php
+  File name: AuthenticateData.php
   File description: check informations
  */
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: LivroControlador.php
+  File name: BookController.php
   File description: insert, select, update, delete books calling methods of class BookDao.
  */
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: autenticacaoUsuario.php
+  File name: AuthenticateUser.php
   File description: check email and password of user
  */
 include '../Utilities/ConnectionDatabase.php';

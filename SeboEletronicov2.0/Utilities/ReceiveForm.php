@@ -1,10 +1,10 @@
 <?php
 /*
-  File name: RecebeForm.php
+  File name: ReceiveForm.php
   File description: gets selected form to register, change, search or delete user
  */
 
-include_once '../ControllerProject/UserController.php';
+include_once '../Controller/UserController.php';
 
 switch ($_POST['tipo']) {
 //switch action selection to be held in the register book, register, change, or delete search

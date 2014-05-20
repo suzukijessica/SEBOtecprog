@@ -1,11 +1,12 @@
 <?php
 /*
-  File name: site.php
+  File name: Site.php
   File description: data view to the site
  */
 
 session_start();
 $idUser = $_SESSION['id_usuario'];
+
 ?>
 
 <!DOCTYPE HTML>

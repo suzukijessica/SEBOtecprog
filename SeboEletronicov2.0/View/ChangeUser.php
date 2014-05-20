@@ -1,6 +1,7 @@
 <?php
+
 /*
-  File name: alteraUsuario.php
+  File name: ChangeUser.php
   File description: data view to change the user
  */
 
@@ -8,7 +9,7 @@ session_start();
 $idUser = $_SESSION['id_usuario'];
 $finalPassword = $_SESSION['senha'];
 
-include '../ControllerProject/UserController.php';
+include '../Controller/UserController.php';
 
 $register = UserController::checksCadastreById($idUser);
 ?>

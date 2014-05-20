@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: ExcessaoTituloInvalido.php
+  File name: ExceptionTitleWrong.php
   File description: establishes exception when an invalid title is inserted.
  */
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: conexao_bd.php
+  File name: Database.php
   File description: connect with database
  */
 

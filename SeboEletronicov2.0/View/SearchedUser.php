@@ -1,13 +1,13 @@
 <?php
 /*
-  File name: usuarioPesquisado.php
+  File name: SearchedUser.php
   File description: data view to find searched user
  */
 
 session_start();
 $idUser = $_SESSION['id_usuario'];
 
-include '../ControllerProject/UserController.php';
+include '../Controller/UserController.php';
 $userName = $_REQUEST['nome'];
 $searchUser = UserController::searchesUser($userName);
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: UsuarioDao.php
+  File name: UserDao.php
   File description: establishes mechanisms for data access to the database.
  */
 

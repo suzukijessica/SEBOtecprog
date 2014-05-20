@@ -1,39 +1,39 @@
 <?php
 /*
- File name: UsuarioControladorTest.php
+ File name: UserControllerTest.php
  File description: testing function of class UsuarioControlador.php
 */ 
 
-require_once "../../Modelo/Usuario.php";
-require_once "../../ControllerProject/UserController.php";
-require_once "../../DaoProject/UserDao.php";
-require_once "../../Utilidades/ValidaDados.php";
-require_once "../../Utilidades/ExcessaoNomeInvalido.php";
-require_once "../../Utilidades/ExcessaoSenhaInvalida.php";
-require_once "../../Utilidades/ExcessaoTelefoneInvalido.php";
-require_once "../../Utilidades/ExcessaoEmailInvalido.php";
-require_once "../../Utilidades/ConexaoComBanco.php";
+require_once "../../Model/UserModel.php";
+require_once "../../Controller/UserController.php";
+require_once "../../Dao/UserDao.php";
+require_once "../../Utilities/AuthenticateData.php";
+require_once "../../Utilities/ExceptionNameWrong.php";
+require_once "../../Utilities/ExceptionPasswordWrong.php";
+require_once "../../Utilities/ExceptionPhoneWrong.php";
+require_once "../../Utilities/ExceptionEmailWrong.php";
+require_once "../../Utilities/ConnectionDatabase.php";
 
-class UsuarioControladorTest extends PHPUnit_Framework_TestCase {
+class UserControllerTest extends PHPUnit_Framework_TestCase {
 
-    protected $usuarioControladorTest;
-    protected $usuario;
+    protected $userControllerTest;
+    protected $user;
     
     protected function setUp() {
-        $senha = array(123123,123123);
-        $this->usuario = new Usuario('lucas', 98989898, 'lucas@lucas.com', $senha);
-        $this->usuarioControladorTest = new UsuarioControlador();
+        $password = array(123123,123123);
+        $this->user = new UserModel('lucas', 98989898, 'lucas@lucas.com', $password);
+        $this->userControllerTest = new UserController();
     }
 
     protected function tearDown() {
-        unset($this->usuarioControladorTest);
-        unset($this->usuario);
+        unset($this->userControllerTest);
+        unset($this->user);
     }
 
-    public function testSalvaUsuario() {
-        $senha = array(123123,123123);
-        $retorno = $this->usuarioControladorTest->salvaUsuario('lucas', 98989898, 'lucas@lucas.com', $senha);
-        $this->assertTrue($retorno);
+    public function testSavesUser() {
+        $password = array(123123,123123);
+        $return = $this->userControllerTest->savesUser('lucas', 98989898, 'lucas@lucas.com', $password);
+        $this->assertTrue($return);
     }
     
 //    public function testChecaCadastroId(){

@@ -1,6 +1,6 @@
 <?php
 /*
-  File name: UsuarioControlador.php
+  File name: UserController.php
   File description: controls actions of save, check, change, delete and search the users
  */
 

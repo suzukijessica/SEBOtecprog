@@ -4,7 +4,7 @@
   File description: model of buy
  */
 
-include "../DaoProject/ConnectionDatabase.inc";
+include "../Dao/ConnectionDatabase.inc";
 
 if (!$dataBase)
     die("<h1>Falha no bd </h1>");

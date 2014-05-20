@@ -1,11 +1,12 @@
 <?php
+
 /*
-  File name: livrosDisponiveis.php
+  File name: AvailableBooks.php
   File description: data view to list the available books
  */
 
 session_start();
-include '../ControllerProject/BookController.php';
+include '../Controller/BookController.php';
 $userId = $_SESSION['id_usuario'];
 
 $listOfBooks = BookController::getAllBook();

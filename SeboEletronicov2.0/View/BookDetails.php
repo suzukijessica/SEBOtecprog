@@ -1,6 +1,6 @@
 <?php
 /*
-  File name: detalheslivro.php
+  File name: BookDetails.php
   File description: data view to see details of the book
  */
 

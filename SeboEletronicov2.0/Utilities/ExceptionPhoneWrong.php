@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: ExcessaoTelefoneInvalido.php
+  File name: ExceptionPhoneWrong.php
   File description: establishes exception when an invalid telephone is inserted.
  */
 

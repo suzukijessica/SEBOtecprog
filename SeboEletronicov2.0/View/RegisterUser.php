@@ -1,11 +1,13 @@
 <?php
+
 /*
-  File name: cadastrarUsuario.php
+  File name: RegisterUser.php
   File description: data view to registering the user
  */
 
 session_start();
 $idUser = $_SESSION['id_usuario'];
+
 ?>
 <!DOCTYPE HTML>
 <html>

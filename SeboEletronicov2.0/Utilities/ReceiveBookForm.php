@@ -1,10 +1,10 @@
 <?php
 /*
-  File name: RecebeFormLivro.php
+  File name: ReceiveBookForm.php
   File description: gets selected form to register, change, search or delete book
  */
 
-include_once '../ControllerProject/BookController.php';
+include_once '../Controller/BookController.php';
 //require_once '';
 
 switch ($_POST['tipo']) {
@@ -23,10 +23,10 @@ switch ($_POST['tipo']) {
         $idBookOwner = $_POST['id_dono'];
 
 
-        $salvo = BookController::savesBook($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $idBookOwner);
+        $saved = BookController::savesBook($bookTitle, $bookAuthor, $bookGender, $bookEdition, $bookPublisher, $bookForSale, $bookForExchange, $bookCondition, $bookDescription, $idBookOwner);
 
 
-        if (!empty($salvo)) {
+        if (!empty($saved)) {
             echo "<script>altert('Livro cadastrado com sucesso!')</script>";
         } else {
             echo "<script>('Falha ao cadastrar o livro, tente novamente.')</script>";

@@ -1,8 +1,10 @@
 <?php
+
 /*
-  File name: pesquisarLivro.php
-  File description: page to search books
+  File name: SearchUser.php
+  File description: page to search users
  */
+
 ?>
 
 <html>

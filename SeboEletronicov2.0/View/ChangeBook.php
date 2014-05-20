@@ -1,13 +1,14 @@
 <?php
+
 /*
-  File name: alterarLivro.php
+  File name: ChangeBook.php
   File description: data view to change the book
  */
 
 session_start();
 $idUser = $_SESSION['id_usuario'];
 
-include '../ControlllerProject/BookController.php';
+include '../Controlller/BookController.php';
 $userId = $_REQUEST['id'];
 $listOfBooks = BookController::getBookById($userId);
 ?>

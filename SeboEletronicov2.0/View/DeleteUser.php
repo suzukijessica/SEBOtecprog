@@ -1,6 +1,7 @@
 <?php
+
 /*
-  File name: excluiUsuarui.php
+  File name: DeleteUser.php
   File description: data view to delete the user
  */
 
@@ -8,7 +9,7 @@ session_start();
 $idUser = $_SESSION['id_usuario'];
 $userPassword = $_SESSION['senha'];
 
-include '../ControllerProject/UserController.php';
+include '../Controller/UserController.php';
 $register = UserController::checksCadastreById($idUser);
 ?>
 <!DOCTYPE HTML>
