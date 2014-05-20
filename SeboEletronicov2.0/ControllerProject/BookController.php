@@ -2,7 +2,7 @@
 
 /*
   File name: LivroControlador.php
-  File description: insert, select, update, delete Livros calling methods of class LivroDao.
+  File description: insert, select, update, delete books calling methods of class BookDao.
  */
 
 include '../Model/BookModel.php';

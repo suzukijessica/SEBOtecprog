@@ -7,18 +7,18 @@
 
 class AuthenticateData {
 
-    public function validaCamposNulos($field) {
+    public function validatesFieldsNull($field) {
         return !(empty($field));
         // returns true if the variable is empty 
         // with this, the value false eh inverted and sent as true
     }
 
-    public function validaSenhaNula($password) {
+    public function validatesPasswordNull($password) {
         //Check if password is null
         return (!(empty($password[0])) && !(empty($password[1])));
     }
 
-    public function validaNome($name) {
+    public function validatesName($name) {
         //Check name provided by user
 
         $validCharacters = '. abcdefghijklmnopqrstuvwxyzçãõáíóúàòìù';
@@ -35,7 +35,7 @@ class AuthenticateData {
         }
     }
 
-    public function validaEmail($email) {
+    public function validatesEmail($email) {
         //Check email provided by user
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -43,7 +43,7 @@ class AuthenticateData {
         }
     }
 
-    public function validaTelefone($telephone) {
+    public function validatesTelephone($telephone) {
         //Check telephone provided by user
 
         if (!filter_var($telephone, FILTER_VALIDATE_INT)) {
@@ -53,7 +53,7 @@ class AuthenticateData {
         }
     }
 
-    public function validaSenha($password) {
+    public function validatesPassword($password) {
         //Check password provided by user
 
         if (!filter_var($password[0], FILTER_VALIDATE_INT)) {//caracter invalido

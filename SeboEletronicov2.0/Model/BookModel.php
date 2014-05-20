@@ -15,100 +15,100 @@ class BookModel {
 
     private $title;
     private $author;
-    private $genero;
+    private $genre;
     private $edition;
     private $publisher;
     private $sale;
     private $swap;
     private $status;
-    private $descricao;
+    private $description;
 
-    function __construct($title, $author, $genero, $edition, $publisher, $sale, $swap, $status, $descricao) {
+    function __construct($title, $author, $genre, $edition, $publisher, $sale, $swap, $status, $description) {
         //Constructor method of class
-        $this->setTitulo($title);
-        $this->setAutor($author);
-        $this->setGenero($genero);
-        $this->setEdicao($edition);
-        $this->setEditora($publisher);
-        $this->setVenda($sale);
-        $this->setTroca($swap);
-        $this->setEstado($status);
-        $this->setDescricao($descricao);
+        $this->setTitle($title);
+        $this->setAuthor($author);
+        $this->setGenre($genre);
+        $this->setEdition($edition);
+        $this->setPublisher($publisher);
+        $this->setSale($sale);
+        $this->setSwap($swap);
+        $this->setStatus($status);
+        $this->setDescription($description);
     }
 
-    public function getTitulo() {
+    public function getTitle() {
         //Method to access the instance of title attribute
-        return $this->titulo;
+        return $this->title;
     }
 
-    public function setTitulo($title) {
+    public function setTitle($title) {
         //Method to modify the instance of the title attribute
-        if (!AuthenticateData::validaCamposnulos($title)) {
-            throw new ExcessaoTituloInvalido("Titulo nao pode ser nulo!");
+        if (!AuthenticateData::validatesFieldsNull($title)) {
+            throw new ExceptionTitleWrong("Titulo nao pode ser nulo!");
         } else {
-            $this->titulo = $title;
+            $this->title = $title;
         }
     }
 
-    public function getAutor() {
+    public function getAuthor() {
         //Method to access the instance of author attribute
-        return $this->autor;
+        return $this->author;
     }
 
-    public function setAutor($author) {
+    public function setAuthor($author) {
         //Method to modify the instance of the author attribute
-        if (!AuthenticateData::validaCamposNulos($author)) {
-            throw new ExcessaoNomeInvalido("O nome do Autor nao pode ser nulo!");
+        if (!AuthenticateData::validatesFieldsNull($author)) {
+            throw new ExceptionNameWrong("O nome do Autor nao pode ser nulo!");
         } elseif (AuthenticateData::validaNome($author) == 1) {
-            throw new ExcessaoNomeInvalido("Nome do Autor contem caracteres invalidos!");
+            throw new ExceptionNameWrong("Nome do Autor contem caracteres invalidos!");
         } elseif (AuthenticateData::validaNome($author) == 2) {
-            throw new ExcessaoNomeInvalido("Nome do Autor contem espaços seguidos!");
+            throw new ExceptionNameWrong("Nome do Autor contem espaços seguidos!");
         } else {
-            $this->autor = $author;
+            $this->author = $author;
         }
     }
 
-    public function getGenero() {
+    public function getGenre() {
         //Method to access the instance of gender attribute
-        return $this->genero;
+        return $this->genre;
     }
 
-    public function setGenero($genero) {
+    public function setGenre($genre) {
         //Method to modify the instance of the gender attribute
-        $this->genero = $genero;
+        $this->genre = $genre;
     }
 
-    public function getTroca() {
+    public function getSwap() {
         //Method to access the instance of switch attribute
-        return $this->troca;
+        return $this->swap;
     }
 
-    public function setTroca($swap) {
+    public function setSwap($swap) {
         //Method to modify the instance of switch attribute
-        $this->troca = $swap;
+        $this->swap = $swap;
     }
 
-    public function getVenda() {
+    public function getSale() {
         //Method to access the instance of sale attribute
-        return $this->venda;
+        return $this->sale;
     }
 
-    public function setVenda($sale) {
+    public function setSale($sale) {
         //Method to modify the instance of the sale attribute
-        $this->venda = $sale;
+        $this->sale = $sale;
     }
 
-    public function getDescricao() {
+    public function getDescription() {
         //Method to access the instance of description attribute
-        return $this->descricao;
+        return $this->description;
     }
 
-    public function setDescricao($descricao) {
+    public function setDescription($description) {
         //Method to modify the instance of description attribute
-        $this->descricao = $descricao;
+        $this->description = $description;
     }
 
-    public function defineTiposDeGeneros() {
+    public function defineTypesOfGenres() {
         //Method to define type of gender
         define("ENGENHARIA", "Engenharia", TRUE);
         define("SOFTWARE", "Engenharia de Software", TRUE);
@@ -120,39 +120,39 @@ class BookModel {
         return array(ENGENHARIA, SOFTWARE, ELETRONICA, ENERGIA, AUTOMOTIVA, AEROESPACIAL);
     }
 
-    public function getEdicao() {
+    public function getEdition() {
         //Method to access the instance of edition attribute
-        return $this->edicao;
+        return $this->edition;
     }
 
-    public function setEdicao($edition) {
+    public function setEdition($edition) {
         //Method to modify the instance of the edition attribute
-        $this->edicao = $edition;
+        $this->edition = $edition;
     }
 
-    public function getEditora() {
+    public function getPublisher() {
         //Method to access the instance of publishing house attribute
-        return $this->editora;
+        return $this->publisher;
     }
 
-    public function setEditora($publisher) {
+    public function setPublisher($publisher) {
         //Method to modify the instance of the publishing house attribute
 
-        if (!AuthenticateData::validaCamposNulos($publisher)) {
-            throw new ExcessaoEditoraInvalida("A Editora do Livro nao pode ser nula!");
+        if (!AuthenticateData::validatesFieldsNull($publisher)) {
+            throw new ExceptionPublishingWrong("A Editora do Livro nao pode ser nula!");
         } else {
-            $this->editora = $publisher;
+            $this->publisher = $publisher;
         }
     }
 
-    public function getEstado() {
+    public function getStatus() {
         //Method to access the instance of status attribute
-        return $this->estado;
+        return $this->status;
     }
 
-    public function setEstado($status) {
+    public function setStatus($status) {
         //Method to modify the instance of the status attribute
-        $this->estado = $status;
+        $this->status = $status;
     }
 
 }

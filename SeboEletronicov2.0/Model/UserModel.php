@@ -21,47 +21,47 @@ class UserModel {
 
     public function __construct($name, $telephone, $email, $password) {
         //Constructor method of class
-        $this->setNome($name);
-        $this->setTelefone($telephone);
+        $this->setName($name);
+        $this->setTelephone($telephone);
         $this->setEmail($email);
-        $this->setSenha($password);
+        $this->setPassword($password);
     }
 
-    public function getNome() {
+    public function getName() {
         //Method to access the instance of name attribute
-        return $this->nome;
+        return $this->name;
     }
 
-    public function setNome($name) {
+    public function setName($name) {
         //Method to modify the instance of the name attribute 
 
-        if (!AuthenticateData::validaCamposNulos($name)) {
+        if (!AuthenticateData::validatesFieldsNull($name)) {
             throw new ExceptionNameWrong("Nome nao pode ser nulo!");
-        } elseif (AuthenticateData::validaNome($name) == 1) {
+        } elseif (AuthenticateData::validatesName($name) == 1) {
             throw new ExceptionNameWrong("Nome contem caracteres invalidos!");
-        } elseif (AuthenticateData::validaNome($name) == 2) {
+        } elseif (AuthenticateData::validatesName($name) == 2) {
             throw new ExceptionNameWrong("Nome contem espaços seguidos!");
         } else {
-            $this->nome = $name;
+            $this->name = $name;
         }
     }
 
-    public function getTelefone() {
+    public function getTelephone() {
         //Method to access the instance of phone attribute
-        return $this->telefone;
+        return $this->telephone;
     }
 
-    public function setTelefone($telephone) {
+    public function setTelephone($telephone) {
         //Method to modify the instance of the telephone attribute 
 
-        if (!AuthenticateData::validaCamposNulos($telephone)) {
+        if (!AuthenticateData::validatesFieldsNull($telephone)) {
             throw new ExceptionPhoneWrong("Telefone nao pode ser nulo!");
-        } elseif (AuthenticateData::validaTelefone($telephone) == 1) {
+        } elseif (AuthenticateData::validatesTelephone($telephone) == 1) {
             throw new ExceptionPhoneWrong("Telefone nao pode conter caracteres alfabeticos!");
-        } elseif (AuthenticateData::validaTelefone($telephone) == 2) {
+        } elseif (AuthenticateData::validatesTelephone($telephone) == 2) {
             throw new ExceptionPhoneWrong("Telefone deve conter exatamente oito (8) digitos!");
         } else {
-            $this->telefone = $telephone;
+            $this->telephone = $telephone;
         }
     }
 
@@ -73,26 +73,26 @@ class UserModel {
     public function setEmail($email) {
         //Method to modify the instance of the email attribute 
 
-        if (!AuthenticateData::validaCamposNulos($email)) {
+        if (!AuthenticateData::validatesFieldsNull($email)) {
             throw new ExceptionEmailWrong("E-mail nao pode ser nulo!");
-        } elseif (AuthenticateData::validaEmail($email) == 1) {
+        } elseif (AuthenticateData::validatesEmail($email) == 1) {
             throw new ExceptionEmailWrong("E-mail nao válido!");
         } else {
             $this->email = $email;
         }
     }
 
-    public function getSenha() {
+    public function getPassword() {
         //Method to access the instance of password attribute
-        return $this->senha;
+        return $this->password;
     }
 
-    public function setSenha($password) {
+    public function setPassword($password) {
         //Method to modify the instance of the password attribute   
 
-        $auxiliar = AuthenticateData::validaSenha($password);
+        $auxiliar = AuthenticateData::validatesPassword($password);
 
-        if (!AuthenticateData::validaSenhaNula($password)) {
+        if (!AuthenticateData::validatesPasswordNull($password)) {
             throw new ExceptionPasswordWrong("Senha nao pode ser nula!");
         } elseif ($auxiliar == 1) {
             throw new ExceptionPasswordWrong("Senha contem caracteres invalidos!");
@@ -101,7 +101,7 @@ class UserModel {
         } elseif ($auxiliar == 3) {
             throw new ExceptionPasswordWrong("Senha e confirmação estão diferentes!");
         } else {
-            $this->senha = $password;
+            $this->password = $password;
         }
     }
 

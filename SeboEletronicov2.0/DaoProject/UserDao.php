@@ -11,7 +11,7 @@ class UserDao {
 
     public function savesUserDao($userName) {
         //saves user in data base
-        $auxiliarPassword = $userName->getSenha();
+        $auxiliarPassword = $userName->getPassword();
         $finalPassword = $auxiliarPassword[0];
 
         $sqlCommand = "INSERT INTO senha (codigo_senha) VALUES ('" . $finalPassword . "')";
@@ -31,7 +31,7 @@ class UserDao {
     public function changesUserDao($userName, $idUser, $userOldPassword) {
         //changes the registration data in the database
 
-        $auxiliarPassword = $userName->getSenha();
+        $auxiliarPassword = $userName->getPassword();
         $changePassword = $auxiliarPassword[0];
 
         $sqlCommand = "UPDATE usuario SET nome_usuario = '" . $idUser->getNome() . "' , telefone_usuario = '" . $userName->getTelefone() . "', 

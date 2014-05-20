@@ -1,7 +1,7 @@
 <?php
 
 /*
-  File name: mail.php
+  File name: EmailModel.php
   File description: model of email
  */
 
@@ -37,4 +37,5 @@ if (mail($addressAuxiliar, $subject, $body, "Content-Type: text/html"))
     echo 'e-mail enviado com sucesso!';
 else
     echo 'e-mail nao enviado!';
+
 ?>

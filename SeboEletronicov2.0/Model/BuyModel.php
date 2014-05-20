@@ -1,10 +1,11 @@
 <?php
 /*
-  File name: compra.php
-  File description: model of bye
+  File name: BuyModel.php
+  File description: model of buy
  */
 
 include "../DaoProject/ConnectionDatabase.inc";
+
 if (!$dataBase)
     die("<h1>Falha no bd </h1>");
 

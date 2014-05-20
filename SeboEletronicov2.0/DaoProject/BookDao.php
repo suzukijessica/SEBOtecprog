@@ -10,10 +10,10 @@ include "../Utilities/ConnectionDataBase.php";
 class BookDao {
 
     public function savesBookDao($book, $idOwner) {
-        // Inserts Livro in Database
+        // Inserts Book in Database
 
         $sqlCommand = "INSERT INTO livro (id_dono, titulo_livro, editora, autor, edicao, genero, estado_conserv, descricao_livro, venda, troca)
-            VALUES ('" . $idOwner . "','" . $book->getTitulo() . "','" . $book->getEditora() . "','" . $book->getAutor() . "',
+            VALUES ('" . $idOwner . "','" . $book->getTitle() . "','" . $book->getEditora() . "','" . $book->getAutor() . "',
                 '" . $book->getEdicao() . "','" . $book->getGenero() . "','" . $book->getEstado() . "','" . $book->getDescricao() . "','" . $book->getVenda() . "',
                     '" . $book->getTroca() . "')";
         $book = mysql_query($sqlCommand);
@@ -21,7 +21,7 @@ class BookDao {
     }
 
     public function searchesBookDao($bookTitle, $newBookState, $usedBookState, $availabilityBookSelling, $availabilityBookExchanging) {
-        // Selects Livro in Database
+        // Selects Book in Database
 
         if (empty($availabilityBookExchanging) && !empty($availabilityBookSelling)) {
             if (empty($newBookState) && !empty($usedBookState)) {
@@ -74,7 +74,7 @@ class BookDao {
     public function changesBookDao($book, $idOwner, $idUser) {
         // Update book parameters in Database	
 
-        $sqlCommand = "UPDATE livro SET id_dono = '" . $idUser . "', titulo_livro = '" . $book->getTitulo() . "', editora = '" . $book->getEditora() . "', 
+        $sqlCommand = "UPDATE livro SET id_dono = '" . $idUser . "', titulo_livro = '" . $book->getTitle() . "', editora = '" . $book->getEditora() . "', 
             autor = '" . $book->getAutor() . "', edicao = '" . $book->getEdicao() . "', genero = '" . $book->getGenero() . "', estado_conserv = '" . $book->getEstado() . "', 
                 descricao_livro = '" . $book->getDescricao() . "', venda = '" . $book->getVenda() . "', troca = '" . $book->getTroca() . "' WHERE id_livro = '" . $idOwner . "'";
         $book = mysql_query($sqlCommand);
