@@ -20,17 +20,32 @@ class UserControllerTest extends PHPUnit_Framework_TestCase {
     protected $user;
     
     protected function setUp() {
+        /**
+         * creates objects which will be used in the tests
+         * no parameters
+         * no return
+        */
         $password = array(123123,123123);
         $this->user = new UserModel('lucas', 98989898, 'lucas@lucas.com', $password);
         $this->userControllerTest = new UserController();
     }
 
     protected function tearDown() {
+        /**
+         * clean objects which were used in the tests
+         * no parameters
+         * no return
+        */
         unset($this->userControllerTest);
         unset($this->user);
     }
 
     public function testSavesUser() {
+        /**
+         * tests save a user in database with all its parameters
+         * no parameters
+         * no return
+        */
         $password = array(123123,123123);
         $return = $this->userControllerTest->savesUser('lucas', 98989898, 'lucas@lucas.com', $password);
         $this->assertTrue($return);
