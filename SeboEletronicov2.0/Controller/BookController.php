@@ -13,14 +13,9 @@ class BookController {
             $bookExchanging, $bookState, $bookDescription, $idBookOwner) {
         // Insert Livro in Database calling method "salvaLivro" of class LivroDao
 
-        if (empty($bookSelling) && empty($bookExchanging)) {
-            $bookSelling = "venda";
-            $bookExchanging = "troca";
-        } else{
-            //nothing to do - proceed to the next step function
-            
-        }
-
+        $bookSelling = verifyBookSelling($bookSelling);
+        $bookExchanging = verifyBookExchanging($bookExchanging);
+        
         try {
             $book = new BookModel($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
             $bookExchanging, $bookState, $bookDescription);
@@ -31,6 +26,32 @@ class BookController {
             
         }
         return BookDao::savesBookDao($book, $idBookOwner);
+    }
+    
+    public function verifyBookSelling($bookSelling){
+    
+        if (empty($bookSelling)) {
+             $bookSelling = "venda";
+             
+             return bookSelling ;
+             
+        } else{
+            //nothing to do - proceed to the next step function
+            
+        }
+    }
+    
+    public function verifyBookExchanging($bookExchanging){
+    
+        if (empty($bookExchanging)) {
+             $bookExchanging = "troca";
+             
+             return bookExchanging;
+             
+        } else{
+            //nothing to do - proceed to the next step function
+            
+        }
     }
 
     public function searchesBook($bookTitle, $newBookState, $usedBookState, $availabilityBookSelling, $availabilityBookExchanging) {
@@ -50,14 +71,10 @@ class BookController {
     public function changesBook($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
             $bookExchanging, $bookState, $bookDescription, $idBookOwner, $idUser) {
         // Update book parameters in Database calling method "alteraLivro" of class LivroDao    
-        if (empty($bookSelling) && empty($bookExchanging)) {
-            $bookSelling = "venda";
-            $bookExchanging = "troca";
-        } else {
-            //nothing to do - proceed to the next step function
-            
-        }
-
+       
+        $bookSelling = verifyBookSelling($bookSelling);
+        $bookExchanging = verifyBookExchanging($bookExchanging);
+        
         try {
             $book = new Livro($bookTitle , $bookAuthor , $bookGenre, $bookEdition, $bookPublishing, $bookSelling,
             $bookExchanging, $bookState, $bookDescription);

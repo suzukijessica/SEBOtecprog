@@ -49,6 +49,18 @@ class BookControllerTest extends PHPUnit_Framework_TestCase{
         $this->assertTrue($return);
     }
     
+    public function testVerifyBookSelling(){
+        $return = $this->bookControllerTest->erifyBookSelling('venda');
+        $this->assertTrue($return);
+        
+    }
+    
+    public function testVerifyBookExchanging(){
+       $return = $this->bookControllerTest->verifyBookExchanging('troca');
+        $this->assertTrue($return);
+        
+    }
+    
     public function testSearchBook() {
          /**
          * tests search for a book in database with all its parameters
