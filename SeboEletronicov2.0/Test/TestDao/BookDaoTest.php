@@ -57,6 +57,28 @@ class BookDaoTest extends PHPUnit_Framework_TestCase {
                 'venda', 'troca');
         $this->assertFalse($return);
     }
+    
+    public function testValidatesBookSelling() {
+         /**
+         * tests validation of book selling
+         * no parameters
+         * no return
+        */
+        $return = $this->bookDaoTest->validatesBookSelling($this->book->getTitulo(), 'novo', 'usado', 
+                'venda');
+        $this->assertFalse($return);
+    }
+    
+    public function testValidatesBookExchanging() {
+         /**
+         * tests validation of book exchanging
+         * no parameters
+         * no return
+        */
+        $return = $this->bookDaoTest->validatesBookExchanging($this->book->getTitulo(), 'novo', 'usado', 
+                'troca');
+        $this->assertFalse($return);
+    }
 
     public function testGetBookByIdDaoWithNullId() {
          /**
@@ -78,6 +100,20 @@ class BookDaoTest extends PHPUnit_Framework_TestCase {
         $this->assertFalse($return);    
     }
     
+    public function testValidatesBookArray(){
+        $return = $this->bookDaoTest->validatesBookArray(booksArray);
+         $this->assertEquals(23, $return[1]);
+         $this->assertEquals($this->book->getTitle(), $return[2]);
+         $this->assertEquals($this->book->getPublisher(), $return[3]);
+         $this->assertEquals($this->book->getAuthor(), $return[4]);
+         $this->assertEquals($this->book->getEdition(), $return[5]);
+         $this->assertEquals($this->book->getGenre(), $return[6]);
+         $this->assertEquals($this->book->getStatus(), $return[7]);
+         $this->assertEquals($this->book->getDescription(), $return[8]);
+         $this->assertEquals($this->book->getSale(), $return[9]);
+         $this->assertEquals($this->book->getSwap(), $return[10]);  
+        
+    }
     public function testGetBookByIdDaoWithValidId() {
         /**
          * tests get a book in database using valid identifier

@@ -24,21 +24,11 @@ class BookDao {
         // Selects Book in Database
 
         if (empty($availabilityBookExchanging) && !empty($availabilityBookSelling)) {
-            if (empty($newBookState) && !empty($usedBookState)) {
-                $sqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $usedBookState . "' 
-            AND tipo_operacao = '" . $availabilityBookSelling . "'";
-            } elseif (!empty($newBookState) && empty($usedBookState)) {
-               $sqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $newBookState . "' 
-            AND tipo_operacao = '" . $availabilityBookSelling . "'";
-            }
+            $sqlCommand = validatesBookSelling($bookTitle, $newBookState, $usedBookState, $availabilityBookSelling);
+            
         } else if (!empty($availabilityBookExchanging) && empty($availabilityBookSelling)) {
-            if (empty($newBookState) && !empty($usedBookState)) {
-                $sqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $usedBookState . "' 
-            AND tipo_operacao = '" . $availabilityBookExchanging . "'";
-            } elseif (!empty($newBookState) && empty($usedBookState)) {
-                $sqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $usedBookState . "' 
-            AND tipo_operacao = '" . $availabilityBookExchanging . "'";
-            }
+            $sqlCommand = validatesBookExchanging($bookTitle, $newBookState, $usedBookState, $availabilityBookExchanging);
+            
         } else {
             $sqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "'";
         }
@@ -57,6 +47,33 @@ class BookDao {
         
     }
 
+   public function validatesBookSelling($bookTitle, $newBookState, $usedBookState, $availabilityBookSelling){
+       
+        if (empty($newBookState) && !empty($usedBookState)) {
+                $testSqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $usedBookState . "' 
+            AND tipo_operacao = '" . $availabilityBookSelling . "'";
+        } elseif (!empty($newBookState) && empty($usedBookState)) {
+               $testSqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $newBookState . "' 
+            AND tipo_operacao = '" . $availabilityBookSelling . "'";
+        }
+            
+        return $testSqlCommand;
+        
+    }
+    
+    public function validatesBookExchanging($sqlCommand, $bookTitle, $newBookState, $usedBookState, $availabilityBookExchanging){
+        
+        if (empty($newBookState) && !empty($usedBookState)) {
+                $testSqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $usedBookState . "' 
+            AND tipo_operacao = '" . $availabilityBookExchanging . "'";
+        } elseif (!empty($newBookState) && empty($usedBookState)) {
+                $testSqlCommand = "SELECT * FROM livro WHERE titulo_livro = '" . $bookTitle . "' AND estado_conserv = '" . $usedBookState . "' 
+            AND tipo_operacao = '" . $availabilityBookExchanging . "'";
+        }
+        
+        return $testSqlCommand;
+    }
+    
     public function getBookByIdDao($idBook) {
         $sqlCommand = "SELECT * FROM livro WHERE id_livro = '" . $idBook . "'";
         $queryResult = mysql_query($sqlCommand);
@@ -93,13 +110,21 @@ class BookDao {
             $booksArray[] = $recordQuery;
         }
 
+           $bool = validatesBookArray($booksArray);
+           
+        return $booksArray;
+    }
+    
+    public function validatesBookArray($booksArray){
+        
         if (!(empty($booksArray))) {
             return false;
         } else{
-            //nothing to do - proceed to the next step function
+            return true;
         }
-
-        return $booksArray;
+        
+        return true;
+ 
     }
 
     public function getAllBookDao() {
