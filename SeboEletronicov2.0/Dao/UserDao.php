@@ -38,6 +38,13 @@ class UserDao {
             email_usuario = '" . $userName->getEmail() . "' WHERE id_usuario = '" . $idUser . "'";
         $user = mysql_query($sqlCommand);
 
+        $savedPassword = compareOldAndNewPassword($changePassword, $userOldPassword);
+
+        return ($userName && $savedPassword);
+    }
+    
+    
+    public function compareOldAndNewPassword($changePassword, $userOldPassword){
         if ($changePassword != $userOldPassword) {
 
             $sqlCommand2= "SELECT id_senha FROM senha WHERE codigo_senha='" . $userOldPassword . "'";
@@ -46,12 +53,8 @@ class UserDao {
 
             $sqlCommand3 = "Update senha SET codigo_senha = '" . $changePassword . "' WHERE id_senha = '" . $idPassword[0] . "'";
             $savedPassword = mysql_query($sqlCommand3);
-        } else{
-            //nothing to do - proceed to the next step function
-            
-        }
-
-        return ($userName && $savedPassword);
+        } 
+        return $savedPassword;
     }
 
     public function searchesUserDao($userName) {
