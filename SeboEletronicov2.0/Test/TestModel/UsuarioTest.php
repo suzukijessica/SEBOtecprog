@@ -5,11 +5,11 @@
 */ 
 
 require_once "../../Modelo/Usuario.php";
-require_once "../../Utilidades/ValidaDados.php";
-require_once "../../Utilidades/ExcessaoNomeInvalido.php";
-require_once "../../Utilidades/ExcessaoSenhaInvalida.php";
-require_once "../../Utilidades/ExcessaoTelefoneInvalido.php";
-require_once "../../Utilidades/ExcessaoEmailInvalido.php";
+require_once "../../Utilidades/AuthenticateData.php";
+require_once "../../Exceptions/ExceptionNameInvalid.php";
+require_once "../../Exceptions/ExceptionPasswordInvalid.php";
+require_once "../../Exceptions/ExceptionPhoneInvalid.php";
+require_once "../../Exceptions/ExceptionEmailInvalid.php";
 
 class UsuarioTest extends PHPUnit_Framework_TestCase{
 

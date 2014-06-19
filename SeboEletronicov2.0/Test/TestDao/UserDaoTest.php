@@ -7,10 +7,10 @@
 require_once "../../Model/UserModel.php";
 require_once "../../Dao/UserDao.php";
 require_once "../../Utilities/AuthenticateData.php";
-require_once "../../Utilities/ExceptionNameWrong.php";
-require_once "../../Utilities/ExceptionPasswordWrong.php";
-require_once "../../Utilities/ExceptionPhoneWrong.php";
-require_once "../../Utilities/ExceptionEmailWrong.php";
+require_once "../../Exceptions/ExceptionNameWrong.php";
+require_once "../../Exceptions/ExceptionPasswordWrong.php";
+require_once "../../Exceptions/ExceptionPhoneWrong.php";
+require_once "../../Exceptions/ExceptionEmailWrong.php";
 require_once "../../Utilities/ConnectionDatabase.php";
 
 class UserDaoTest extends PHPUnit_Framework_TestCase {

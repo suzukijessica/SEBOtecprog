@@ -6,10 +6,10 @@
  */
 
 include '../Utilities/AuthenticateData.php';
-include '../Utilities/ExceptionNameWrong.php';
-include '../Utilities/ExceptionPhoneWrong.php';
-include '../Utilities/ExceptionEmailWrong.php';
-include '../Utilities/ExceptionPasswordWrong.php';
+include '../Exceptions/ExceptionNameWrong.php';
+include '../Exceptions/ExceptionPhoneWrong.php';
+include '../Exceptions/ExceptionEmailWrong.php';
+include '../Exceptions/ExceptionPasswordWrong.php';
 include '../Dao/UserDao.php';
 
 class UserModel {

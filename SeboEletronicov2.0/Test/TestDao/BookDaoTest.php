@@ -7,9 +7,9 @@
 require_once "../../Model/BookModel.php";
 require_once "../../Dao/BookDao.php";
 require_once "../../Utilities/AuthenticateData.php";
-require_once "../../Utilities/ExceptionNameWrong.php";
-require_once "../../Utilities/ExceptionTitleWrong.php";
-require_once "../../Utilities/ExceptionPublishingWrong.php";
+require_once "../../Exceptions/ExceptionNameWrong.php";
+require_once "../../Exceptions/ExceptionTitleWrong.php";
+require_once "../../Exceptions/ExceptionPublishingWrong.php";
 require_once "../../Utilities/ConnectionDatabase.php";
 
 class BookDaoTest extends PHPUnit_Framework_TestCase {

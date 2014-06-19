@@ -7,9 +7,9 @@
 
 include '../Dao/BookDao.php';
 include '../Utilities/AuthenticateData.php';
-include '../Utilities/ExceptionNameWrong.php';
-include '../Utilities/ExceptionTileWrong.php';
-include '../Utilities/ExceptionPublishingWrong.php';
+include '../Exceptions/ExceptionNameWrong.php';
+include '../Exceptions/ExceptionTileWrong.php';
+include '../Exceptions/ExceptionPublishingWrong.php';
 
 class BookModel {
 
